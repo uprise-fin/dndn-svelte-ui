@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "amandeepmittal.pug",
+    "eamodio.gitlens",
+    "svelte.svelte-vscode"
+  ]
+}
