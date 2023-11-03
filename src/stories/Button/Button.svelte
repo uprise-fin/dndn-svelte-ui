@@ -15,6 +15,7 @@
   this={el}
   {...$$restProps}
   {href}
+  {target}
   {rel}
   class={['button', `button--${variant}`].join(' ')}
   on:click
