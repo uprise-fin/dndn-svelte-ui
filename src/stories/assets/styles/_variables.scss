@@ -1,0 +1,25 @@
+:root {
+  --dd__blurple--50: #f1f2ff;
+  --dd__blurple--100: #e2e2ff;
+  --dd__blurple--200: #babaff;
+  --dd__blurple--300: #9895fd;
+  --dd__blurple--400: #7065f1;
+  --dd__blurple--500: #5e4ff0;
+  --dd__blurple--600: #4533c0;
+  --dd__blurple--700: #2f1c90;
+  --dd__blurple--800: #1d0d60;
+  --dd__blurple--900: #0e0330;
+
+  --dd__gray--100: #e1e1e4;
+  --dd__gray--300: #b0b0ba;
+  --dd__gray--400: #9898a5;
+  --dd__gray--500: #808090;
+  --dd__gray--600: #56566c;
+  --dd__gray--700: #3d3d57;
+  --dd__gray--800: #252542;
+
+  --dd__red--500: #ff213f;
+
+  --color--primary: var(--dd__blurple--500);
+  --color--warning: var(--dd__red--500);
+}
