@@ -17,26 +17,19 @@ const meta = {
       options: buttonVariant,
     },
     href: {
-      description: 'native 속성입니다. a 요소로 렌더링됩니다.',
       table: {
-        type: { summary: 'string' },
+        disable: true,
       },
-      control: 'text',
     },
     target: {
-      description: 'native 속성입니다. href와 함께 동작합니다.',
       table: {
-        type: { summary: htmlAttributeAnchorTarget.join(' | ') },
+        disable: true,
       },
-      control: 'text',
     },
     rel: {
-      description:
-        "native 속성입니다. target: _blank인 경우에는 'noreferrer noopener'로 동작합니다.",
       table: {
-        type: { summary: 'string' },
+        disable: true,
       },
-      control: 'text',
     },
   },
 } satisfies Meta<Button>
