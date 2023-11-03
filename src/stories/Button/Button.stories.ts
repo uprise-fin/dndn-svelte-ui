@@ -10,6 +10,9 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     variant: {
+      table: {
+        type: { summary: buttonVariant.join(' | ') },
+      },
       control: { type: 'select' },
       options: buttonVariant,
     },
