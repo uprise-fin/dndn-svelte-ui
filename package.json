@@ -1,7 +1,24 @@
 {
   "name": "iruda-svelte-ui",
   "version": "0.0.1",
-  "private": true,
+  "description": "DNDN ui components",
+  "engines": {
+    "node": ">=16"
+  },
+  "files": [
+    "stories/**"
+  ],
+  "repository": "https://github.com/uprise-fin/iruda-svelte-ui",
+  "author": "uprise-fin",
+  "license": "MIT",
+  "keywords": [
+    "uprise",
+    "ui",
+    "design",
+    "system",
+    "svelte",
+    "storybook"
+  ],
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -13,6 +30,9 @@
     "format": "prettier --plugin-search-dir . --write .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "sass": "^1.69.5"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.2",
