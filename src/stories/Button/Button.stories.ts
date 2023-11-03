@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
 
 import Button from './Button.svelte'
-import { buttonVariant } from './button'
+import { buttonVariant, htmlAttributeAnchorTarget } from './button'
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const meta = {
@@ -23,7 +23,7 @@ const meta = {
     target: {
       description: 'native 속성입니다. href와 함께 동작합니다.',
       table: {
-        type: { summary: '_self | _blank | _parent | _top' },
+        type: { summary: htmlAttributeAnchorTarget.join(' | ') },
       },
       control: 'text',
     },

@@ -1,4 +1,5 @@
-export type HTMLAttributeAnchorTarget = '_self' | '_blank' | '_parent' | '_top'
+export const htmlAttributeAnchorTarget = ['_self', '_blank', '_parent', '_top'] as const
+export type HTMLAttributeAnchorTarget = (typeof htmlAttributeAnchorTarget)[number]
 
 export const buttonVariant = [
   'primary',
