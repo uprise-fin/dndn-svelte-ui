@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { Button } from '..'
+
   export let open = false
   export let title = ''
   export let body = ''
@@ -43,6 +45,15 @@
         {@html body}
       </slot>
     </div>
+
+    <menu class="dialog__footer">
+      <slot name="footer">
+        <Button variant="tertiary">고객센터 문의</Button>
+        <form method="dialog">
+          <Button>확인</Button>
+        </form>
+      </slot>
+    </menu>
   </article>
 </dialog>
 
@@ -82,6 +93,22 @@
       font-size: 15px;
       line-height: 1.55;
       color: var(--dd__gray--600);
+    }
+
+    &__footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+
+      &:not(:empty) {
+        margin-top: 24px;
+      }
+
+      [method='dialog'] {
+        display: contents;
+      }
     }
   }
 
