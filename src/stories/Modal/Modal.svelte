@@ -2,13 +2,22 @@
   export let open = false
   export let title = ''
   export let body = ''
+  export let disableEscapeKeyDown = false
 
   let dialog: HTMLDialogElement | undefined
 
   $: open ? dialog?.showModal() : dialog?.close()
+
+  const handleCancel = (
+    event: Event & {
+      currentTarget: EventTarget & HTMLDialogElement
+    },
+  ) => {
+    disableEscapeKeyDown && event.preventDefault()
+  }
 </script>
 
-<dialog class="dialog" bind:this={dialog}>
+<dialog class="dialog" bind:this={dialog} on:cancel={handleCancel}>
   <article class="dialog__container">
     <header class="dialog__header">
       <h1 class="dialog__title">{title}</h1>
