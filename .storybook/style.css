@@ -1,4 +1,4 @@
 @import url('../node_modules/pretendard/dist/web/static/pretendard.css');
 body {
-  font-family: Pretendard, -apple-system, system-ui, Roboto, sans-serif;
+  font-family: Pretendard, -apple-system, system-ui, Roboto, 'Malgun Gothic', sans-serif;
 }
