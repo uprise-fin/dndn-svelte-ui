@@ -52,6 +52,10 @@
       cursor: not-allowed;
     }
 
+    &:focus-visible {
+      outline: 1px auto -webkit-focus-ring-color;
+    }
+
     &--primary {
       background: var(--color--primary);
       color: #fff;
