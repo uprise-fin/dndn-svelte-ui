@@ -17,9 +17,11 @@ const meta = {
       options: buttonVariant,
     },
     href: {
+      description: 'native 속성입니다. a 요소로 렌더링합니다.',
       table: {
-        disable: true,
+        type: { summary: 'string' },
       },
+      control: 'text',
     },
     target: {
       table: {
