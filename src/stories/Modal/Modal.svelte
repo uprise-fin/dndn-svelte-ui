@@ -8,6 +8,19 @@
 
   $: open ? dialog?.showModal() : dialog?.close()
 
+  const handleClick = (
+    event: MouseEvent & {
+      currentTarget: EventTarget & HTMLDialogElement
+    },
+  ) => {
+    const clickableOutside =
+      !disableEscapeKeyDown &&
+      event.target instanceof HTMLElement &&
+      event.target?.nodeName === 'DIALOG'
+
+    clickableOutside && dialog?.close()
+  }
+
   const handleCancel = (
     event: Event & {
       currentTarget: EventTarget & HTMLDialogElement
@@ -17,7 +30,9 @@
   }
 </script>
 
-<dialog class="dialog" bind:this={dialog} on:cancel={handleCancel}>
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<dialog class="dialog" bind:this={dialog} on:click={handleClick} on:cancel={handleCancel}>
   <article class="dialog__container">
     <header class="dialog__header">
       <h1 class="dialog__title">{title}</h1>
