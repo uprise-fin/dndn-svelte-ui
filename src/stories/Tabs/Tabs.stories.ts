@@ -1,23 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
 
-import Tabs from './Tabs.svelte';
-import { tabNumber } from './type';
+import Tabs from './Tabs.svelte'
+import { tabQuantity } from './type'
 
-export let tabNumber: tabNumber = 2;
 
 const meta = {
   title: 'Tabs',
   component: Tabs,
   tags: ['autodocs'],
   argTypes: {
-    tabNumber: {
+    tabQuantity: {
       table: {
-        type: { summary: 'number' },
+        type: { summary: '메뉴 갯수' },
       },
       control: 'select',
       options: [2, 3],
     },
-  },
+  }
 } satisfies Meta<Tabs>
 
 export default meta;
@@ -25,12 +24,12 @@ type Story = StoryObj<typeof meta>;
 
 export const TwoTabs: Story = {
   args: {
-    tabNumber: 2,
+    tabQuantity: 2,
   },
 };
 
 export const ThreeTabs: Story = {
   args: {
-    tabNumber: 3,
+    tabQuantity: 3,
   },
 };
