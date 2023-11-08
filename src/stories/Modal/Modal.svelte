@@ -6,35 +6,30 @@
   export let body = ''
   export let disableEscapeKeyDown = false
 
-  let dialog: HTMLDialogElement | undefined
+  $: _open = open
 
-  $: open ? dialog?.showModal() : dialog?.close()
+  const closeModal = () => {
+    _open = false
+  }
 
-  const handleClick = (
-    event: MouseEvent & {
-      currentTarget: EventTarget & HTMLDialogElement
-    },
-  ) => {
-    const clickableOutside =
-      !disableEscapeKeyDown &&
-      event.target instanceof HTMLElement &&
-      event.target?.nodeName === 'DIALOG'
-
-    clickableOutside && dialog?.close()
+  const handleClick = () => {
+    !disableEscapeKeyDown && closeModal()
   }
 
   const handleCancel = (
-    event: Event & {
-      currentTarget: EventTarget & HTMLDialogElement
+    event: KeyboardEvent & {
+      currentTarget: EventTarget & Window
     },
   ) => {
-    disableEscapeKeyDown && event.preventDefault()
+    !disableEscapeKeyDown && event.key === 'Escape' && closeModal()
   }
 </script>
 
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<dialog class="dialog" bind:this={dialog} on:click={handleClick} on:cancel={handleCancel}>
+<div class="dialog" class:is-open={_open}>
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <span class="dialog__backdrop" on:click={handleClick} />
+
   <article class="dialog__container">
     <header class="dialog__header">
       <h1 class="dialog__title">{title}</h1>
@@ -48,35 +43,50 @@
 
     <menu class="dialog__footer">
       <slot name="footer">
-        <Button variant="tertiary">고객센터 문의</Button>
-        <form method="dialog">
-          <Button>확인</Button>
-        </form>
+        <Button on:click={closeModal}>확인</Button>
       </slot>
     </menu>
   </article>
-</dialog>
+</div>
+
+<svelte:window on:keydown={handleCancel} />
 
 <style lang="scss">
   .dialog {
-    box-sizing: border-box;
-    min-width: 320px;
-    padding: 28px 20px;
-    border: 0;
-    border-radius: 16px;
-    background: #fff;
-    outline: none;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
 
-    &[open] {
-      animation: blowUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    &.is-open {
+      display: flex;
     }
 
-    &::backdrop {
+    &__backdrop {
+      position: fixed;
+      inset: inherit;
       background: rgba(0, 0, 0, 0.4);
     }
 
     &__container {
-      display: contents;
+      overflow: auto;
+      box-sizing: border-box;
+      position: relative;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      min-width: 320px;
+      max-width: calc((100% - 6px) - 2em);
+      max-height: calc((100% - 6px) - 2em);
+      padding: 28px 20px;
+      border-radius: 16px;
+      background: #fff;
+
+      .is-open & {
+        animation: blowUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      }
     }
 
     &__title {
@@ -96,8 +106,7 @@
     }
 
     &__footer {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
       gap: 8px;
       margin: 0;
       padding: 0;
@@ -106,8 +115,8 @@
         margin-top: 24px;
       }
 
-      [method='dialog'] {
-        display: contents;
+      :global(.button) {
+        flex: 1 1 0;
       }
     }
   }
