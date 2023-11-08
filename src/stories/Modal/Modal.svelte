@@ -6,10 +6,8 @@
   export let body = ''
   export let disableEscapeKeyDown = false
 
-  $: _open = open
-
   const closeModal = () => {
-    _open = false
+    open = false
   }
 
   const handleClick = () => {
@@ -25,7 +23,7 @@
   }
 </script>
 
-<div class="dialog" class:is-open={_open}>
+<div class="dialog" class:is-open={open}>
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <span class="dialog__backdrop" on:click={handleClick} />
@@ -117,6 +115,10 @@
 
       :global(.button) {
         flex: 1 1 0;
+      }
+
+      :global([slot='footer']) {
+        display: contents;
       }
     }
   }
