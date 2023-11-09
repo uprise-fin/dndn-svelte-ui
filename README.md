@@ -5,7 +5,7 @@
 ### Install
 
 ```bash
-yarn add iruda-svelte-ui
+yarn add @uprise-fin/iruda-svelte-ui
 yarn add -D sass
 ```
 
@@ -14,7 +14,7 @@ yarn add -D sass
 ```javascript
 // +layout.svelte
 
-<script>import 'iruda-svelte-ui/src/stories/assets/styles/index.scss'</script>
+<script>import '@uprise-fin/iruda-svelte-ui/src/stories/assets/styles/index.scss'</script>
 ```
 
 ### Basic usage
@@ -23,7 +23,7 @@ yarn add -D sass
 // YourComponent.svelte
 
 <script>
-  import { Button } from 'iruda-svelte-ui/src/stories'
+  import { Button } from '@uprise-fin/iruda-svelte-ui/src/stories'
 </script>
 
 <Button on:click={() => alert('Hello World!')}>Button</Button>
