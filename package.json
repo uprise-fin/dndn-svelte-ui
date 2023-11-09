@@ -1,10 +1,11 @@
 {
   "name": "iruda-svelte-ui",
-  "version": "0.0.1",
+  "version": "0.0.1-beta",
   "description": "DNDN ui components",
   "engines": {
     "node": ">=16"
   },
+  "main": "index.js",
   "files": [
     "stories/**"
   ],
@@ -33,6 +34,9 @@
   },
   "peerDependencies": {
     "sass": "^1.69.5"
+  },
+  "publishConfig": {
+    "@uprise-fin:registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.2",
