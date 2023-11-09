@@ -8,13 +8,20 @@ const meta = {
   component: Modal,
   tags: ['autodocs'],
   argTypes: {},
+  parameters: {
+    docs: {
+      story: {
+        height: '300px',
+      },
+    },
+  },
 } satisfies Meta<Modal>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 // More on writing stories with args: https://storybook.js.org/docs/svelte/writing-stories/args
-export const Primary: Story = {
+export const Basic: Story = {
   args: {
     open: true,
     title: '휴대폰 번호 변경 실패',
