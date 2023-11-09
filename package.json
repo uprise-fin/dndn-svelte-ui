@@ -2,6 +2,7 @@
   "name": "@uprise-fin/iruda-svelte-ui",
   "version": "0.0.1-beta.6",
   "description": "DNDN ui components",
+  "private": true,
   "engines": {
     "node": ">=16"
   },
