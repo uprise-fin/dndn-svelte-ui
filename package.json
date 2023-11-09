@@ -5,9 +5,9 @@
   "engines": {
     "node": ">=16"
   },
-  "main": "dist/src/index.js",
+  "main": "storybook-static/index.json",
   "files": [
-    "stories/**"
+    "storybook-static/**"
   ],
   "repository": {
     "type": "git",
