@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte'
   import { Button } from '..'
 
   export let open = false
@@ -6,8 +7,11 @@
   export let body = ''
   export let disableEscapeKeyDown = false
 
+  const dispatch = createEventDispatcher<{ close: undefined }>()
+
   const closeModal = () => {
     open = false
+    dispatch('close')
   }
 
   const handleClick = () => {
