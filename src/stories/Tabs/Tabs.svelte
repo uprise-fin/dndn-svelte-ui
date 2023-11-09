@@ -1,21 +1,30 @@
 <script lang="ts">
   import type { HTMLAttributeAnchorTarget } from './type'
 
-  export let tabQuantity = 2
+  export let items = [
+    { label: 'First', value: 1 },
+    { label: 'Second', value: 2 },
+    { label: 'Third', value: 3 },
+  ]
 
-  let activeTab = 'tab1'
-  function switchTab(tab: string) {
-    activeTab = tab
+  export let tabQty = items.length
+  export let activeTabValue = 1
+
+  function switchTab(index: number) {
+    activeTabValue = index
   }
 </script>
 
+<button on:click={() => (tabQty = 2)}> 2 Tabs </button>
+<button on:click={() => (tabQty = 3)}> 3 Tabs </button>
+
 <div class="tab-container">
-  {#each Array.from({ length: tabQuantity }) as _, index}
+  {#each items.slice(0, tabQty) as item, index (item.value)}
     <div
-      class="tab-button {activeTab === `tab${index + 1}` ? 'active-tab' : 'inactive-tab'}"
-      on:click={() => switchTab(`tab${index + 1}`)}
+      class="tab-button {activeTabValue === item.value ? 'active-tab' : 'inactive-tab'}"
+      on:click={() => switchTab(item.value)}
     >
-      Tab {index + 1}
+      {item.label}
     </div>
   {/each}
 </div>
@@ -50,17 +59,17 @@
     /* 선택된 탭 아래 선 스타일 */
     position: relative;
     &:after {
-      content: '';
+      background: #252542;
       width: 100%;
       height: 1px;
-      background: #252542;
       position: absolute;
       bottom: -10px;
       left: 0;
       opacity: 0;
+      content: '';
     }
   }
-  /* 선택되면 선 표시 */
+  /* 선택된 탭 아래 선 표시 */
   .tab-button.active-tab::after {
     opacity: 1;
   }
