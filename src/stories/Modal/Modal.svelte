@@ -19,7 +19,8 @@
       currentTarget: EventTarget & Window
     },
   ) => {
-    !disableEscapeKeyDown && event.key === 'Escape' && closeModal()
+    const closeableByKeyboard = !disableEscapeKeyDown && event.key === 'Escape'
+    closeableByKeyboard && closeModal()
   }
 </script>
 
