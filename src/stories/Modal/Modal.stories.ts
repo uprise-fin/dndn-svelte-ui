@@ -7,7 +7,11 @@ const meta = {
   title: 'Example/Modal',
   component: Modal,
   tags: ['autodocs'],
-  argTypes: {},
+  argTypes: {
+    open: {
+      description: 'bind:{property} 형태로 전달하면 양방향으로 바인딩됩니다.',
+    },
+  },
   parameters: {
     docs: {
       story: {
