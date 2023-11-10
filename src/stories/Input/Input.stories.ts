@@ -4,7 +4,7 @@ import Input from './Input.svelte'
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const meta = {
-  title: 'Example/Input',
+  title: 'Example/TextField',
   component: Input,
   tags: ['autodocs'],
   argTypes: {
@@ -17,7 +17,7 @@ const meta = {
       },
     },
     clearable: {
-      description: '요소 안의 X버튼을 클릭하여 value를 제거합니다.',
+      description: '요소 안 우측의 X버튼 노출 여부를 결정합니다.',
     },
   },
 } satisfies Meta<Input>
