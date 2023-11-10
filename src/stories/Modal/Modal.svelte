@@ -17,15 +17,6 @@
   const handleClick = () => {
     !disableEscapeKeyDown && closeModal()
   }
-
-  const handleCancel = (
-    event: KeyboardEvent & {
-      currentTarget: EventTarget & Window
-    },
-  ) => {
-    const closeableByKeyboard = !disableEscapeKeyDown && event.key === 'Escape'
-    closeableByKeyboard && closeModal()
-  }
 </script>
 
 <div class="dialog" class:is-open={open}>
@@ -51,8 +42,6 @@
     </menu>
   </article>
 </div>
-
-<svelte:window on:keydown={handleCancel} />
 
 <style lang="scss">
   .dialog {
