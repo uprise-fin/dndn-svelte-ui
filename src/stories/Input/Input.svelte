@@ -187,6 +187,7 @@
       top: 8.5px;
       width: var(--size);
       height: var(--size);
+      border-radius: 100%;
       background: var(--color);
     }
 
