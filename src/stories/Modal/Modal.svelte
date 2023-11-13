@@ -3,6 +3,7 @@
   import { Button } from '..'
 
   export let open = false
+  export let toast = false
   export let title = ''
   export let body = ''
   export let disableEscapeKeyDown = false
@@ -19,7 +20,7 @@
   }
 </script>
 
-<div class="dialog" class:is-open={open}>
+<div class="dialog" class:is-open={open} class:dialog--toast={toast}>
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <span class="dialog__backdrop" on:click={handleClick} />
@@ -79,6 +80,21 @@
       .is-open & {
         animation: blowUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
       }
+
+      .dialog--toast & {
+        align-self: flex-end;
+        min-width: auto;
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        margin: 0;
+        border-end-end-radius: 0;
+        border-end-start-radius: 0;
+      }
+
+      .dialog--toast.is-open & {
+        animation: toast 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
     }
 
     &__title {
@@ -123,6 +139,15 @@
     }
     to {
       transform: scale(1);
+    }
+  }
+
+  @keyframes toast {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
     }
   }
 </style>
