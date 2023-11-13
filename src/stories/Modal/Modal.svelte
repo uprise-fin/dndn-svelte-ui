@@ -8,10 +8,12 @@
   export let title = ''
   export let body = ''
   export let disableEscapeKeyDown = false
+  export let keepDialog = false
 
   const dispatch = createEventDispatcher<{ close: undefined }>()
 
   const closeModal = () => {
+    if (keepDialog) return
     open = false
     dispatch('close')
   }
@@ -29,7 +31,9 @@
   <article class="dialog__container">
     <header class="dialog__header">
       <h1 class="dialog__title">{title}</h1>
-      <button class="dialog__close" on:click={closeModal}>닫기</button>
+      {#if !keepDialog}
+        <button class="dialog__close" on:click={closeModal}>닫기</button>
+      {/if}
     </header>
 
     <div class="dialog__body">
