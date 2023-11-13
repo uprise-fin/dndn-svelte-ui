@@ -14,6 +14,14 @@ const meta = {
     toast: {
       description: 'toast 모드로 노출합니다.',
     },
+    disableEscapeKeyDown: {
+      table: {
+        disable: true,
+      },
+    },
+    keepDialog: {
+      description: 'dialog 요소를 닫지 않습니다.',
+    },
   },
   parameters: {
     docs: {
