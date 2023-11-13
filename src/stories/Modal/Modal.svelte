@@ -78,10 +78,7 @@
       padding: 28px 20px;
       border-radius: 16px;
       background: #fff;
-
-      .is-open & {
-        animation: blowUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-      }
+      animation: blowUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
       .dialog--toast & {
         align-self: flex-end;
@@ -92,9 +89,6 @@
         margin: 0;
         border-end-end-radius: 0;
         border-end-start-radius: 0;
-      }
-
-      .dialog--toast.is-open & {
         animation: toast 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
       }
     }
