@@ -29,6 +29,7 @@
   <article class="dialog__container">
     <header class="dialog__header">
       <h1 class="dialog__title">{title}</h1>
+      <button class="dialog__close" on:click={closeModal}>닫기</button>
     </header>
 
     <div class="dialog__body">
@@ -98,12 +99,52 @@
       }
     }
 
-    &__title {
+    &__header {
+      display: flex;
       margin: 0 0 16px;
+    }
+
+    &__title {
+      margin: 0;
       font-weight: 700;
       font-size: 20px;
       line-height: 1.3;
       color: var(--dd__gray--800);
+    }
+
+    &__close {
+      --size: 24px;
+      all: unset;
+      cursor: pointer;
+      flex: 0 0 auto;
+      position: relative;
+      width: var(--size);
+      height: var(--size);
+      margin: 0 0 0 auto;
+      text-indent: -9999px;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 2px;
+        height: 16px;
+        margin: auto;
+        background: var(--dd__gray--800);
+        border-radius: 4px;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
     }
 
     &__body {
