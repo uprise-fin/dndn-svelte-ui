@@ -5,8 +5,8 @@
 ### Install
 
 ```bash
-yarn add @uprise-fin/iruda-svelte-ui
-yarn add -D sass
+pnpm add @uprise-fin/iruda-svelte-ui
+pnpm add -D sass
 ```
 
 ### Import CSS
