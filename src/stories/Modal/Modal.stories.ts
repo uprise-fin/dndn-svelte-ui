@@ -11,6 +11,17 @@ const meta = {
     open: {
       description: 'bind:{property} 형태로 전달하면 양방향 바인딩됩니다.',
     },
+    toast: {
+      description: 'toast 모드로 노출합니다.',
+    },
+    disableEscapeKeyDown: {
+      table: {
+        disable: true,
+      },
+    },
+    keepDialog: {
+      description: 'dialog 요소를 닫지 않습니다.',
+    },
   },
   parameters: {
     docs: {
