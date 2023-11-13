@@ -3,6 +3,7 @@
   import { Button } from '..'
 
   export let open = false
+  export let width = '320px'
   export let toast = false
   export let title = ''
   export let body = ''
@@ -20,7 +21,7 @@
   }
 </script>
 
-<div class="dialog" class:is-open={open} class:dialog--toast={toast}>
+<div class="dialog" class:is-open={open} class:dialog--toast={toast} style={`--width: ${width};`}>
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <span class="dialog__backdrop" on:click={handleClick} />
@@ -70,7 +71,7 @@
       bottom: 0;
       right: 0;
       margin: auto;
-      min-width: 320px;
+      width: var(--width);
       max-width: calc((100% - 6px) - 2em);
       max-height: calc((100% - 6px) - 2em);
       padding: 28px 20px;
