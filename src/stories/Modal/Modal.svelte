@@ -6,7 +6,7 @@
   export let width = '320px'
   export let toast = false
   export let title = ''
-  export let body = ''
+  export let content = ''
   export let disableEscapeKeyDown = false
   export let keepDialog = false
 
@@ -38,7 +38,7 @@
 
     <div class="dialog__body">
       <slot>
-        {@html body}
+        {@html content}
       </slot>
     </div>
 
