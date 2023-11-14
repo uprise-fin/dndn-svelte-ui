@@ -62,23 +62,22 @@
     }
 
     &--secondary {
-      background: rgba(#e2e2ff, 0.4);
-      // background: rgb(from var(--dd__blurple--100) r g b / 0.4); https://github.com/w3c/csswg-drafts/issues/6880
-      color: var(--dd__blurple--400);
+      background: var(--main__container);
+      color: var(--main__primary);
     }
 
     &--tertiary {
-      background: rgba(#e1e1e4, 0.65);
-      color: var(--dd__gray--500);
+      background: var(--neutral__container--high);
+      color: var(--neutral__tertiary);
     }
 
     &--warning {
-      background: var(--color--warning);
+      background: var(--color--danger);
       color: #fff;
     }
 
     &--outline {
-      border: 1px solid rgba(#e1e1e4, 0.65);
+      border: 1px solid var(--neutral__line);
       color: var(--dd__gray--800);
 
       &:disabled {
