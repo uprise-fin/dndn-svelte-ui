@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
 
-import Input from './Input.svelte'
+import TextField from './TextField.svelte'
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const meta = {
   title: 'Example/TextField',
-  component: Input,
+  component: TextField,
   tags: ['autodocs'],
   argTypes: {
     value: {
@@ -20,7 +20,7 @@ const meta = {
       description: '요소 안 우측의 X버튼 노출 여부를 결정합니다.',
     },
   },
-} satisfies Meta<Input>
+} satisfies Meta<TextField>
 
 export default meta
 type Story = StoryObj<typeof meta>
