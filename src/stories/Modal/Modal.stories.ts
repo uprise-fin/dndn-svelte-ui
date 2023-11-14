@@ -40,6 +40,7 @@ export const Basic: Story = {
   args: {
     open: true,
     title: '휴대폰 번호 변경 실패',
-    body: '<span style="color: var(--color--warning);">본인 명의의 휴대폰 번호</span>로만\n변경할 수 있어요.',
+    content:
+      '<span style="color: var(--color--warning);">본인 명의의 휴대폰 번호</span>로만\n변경할 수 있어요.',
   },
 }
