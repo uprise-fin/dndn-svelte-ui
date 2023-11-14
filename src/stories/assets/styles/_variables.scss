@@ -1,4 +1,39 @@
 :root {
+  --main--100: #fff;
+  --main--97: #f5f5ff;
+  --main--93: #eaeaff;
+  --main--89: #ddddff;
+  --main--50: #6c5efe;
+
+  --main__primary: var(--dd__m--50);
+
+  --main__container--low: var(--main--100);
+  --main__container: var(--main--97);
+  --main__container--high: var(--main--93);
+  --main__container--higher: var(--main--89);
+
+  --neutral--100: #fff;
+  --neutral--97: #f7f6f9;
+  --neutral--93: #ebeaf0;
+  --neutral--89: #dfdfe4;
+  --neutral--60: #8f909c;
+  --neutral--40: #696880;
+  --neutral--25: #383957;
+  --neutral--15: #222340;
+
+  --neutral__primary: var(--neutral--15);
+  --neutral__secondary: var(--neutral--25);
+  --neutral__tertiary: var(--neutral--40);
+  --neutral__caption: var(--neutral--60);
+  --neutral__line: var(--neutral--97);
+
+  --neutral__container--low: var(--neutral--100);
+  --neutral__container: var(--neutral--97);
+  --neutral__container--high: var(--neutral--93);
+  --neutral__container--higher: var(--neutral--89);
+
+  --danger--55: #ff2541;
+
   --dd__blurple--50: #f1f2ff;
   --dd__blurple--100: #e2e2ff;
   --dd__blurple--200: #babaff;
@@ -20,6 +55,7 @@
 
   --dd__red--500: #ff213f;
 
-  --color--primary: var(--dd__blurple--500);
+  --color--primary: var(--main__primary);
   --color--warning: var(--dd__red--500);
+  --color--danger: var(--danger--55);
 }
