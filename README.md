@@ -1,11 +1,11 @@
-# iruda svelte ui
+# dndn svelte ui
 
 ## Getting Started
 
 ### Install
 
 ```bash
-pnpm add @uprise-fin/iruda-svelte-ui
+pnpm add @uprise-fin/dndn-svelte-ui
 pnpm add -D sass
 ```
 
@@ -14,7 +14,7 @@ pnpm add -D sass
 ```javascript
 // +layout.svelte
 
-<script>import '@uprise-fin/iruda-svelte-ui/src/stories/assets/styles/index.scss'</script>
+<script>import '@uprise-fin/dndn-svelte-ui/src/stories/assets/styles/index.scss'</script>
 ```
 
 ### Basic usage
@@ -23,7 +23,7 @@ pnpm add -D sass
 // YourComponent.svelte
 
 <script>
-  import { Button } from '@uprise-fin/iruda-svelte-ui/src/stories'
+  import { Button } from '@uprise-fin/dndn-svelte-ui/src/stories'
 </script>
 
 <Button on:click={() => alert('Hello World!')}>Button</Button>
