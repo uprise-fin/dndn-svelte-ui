@@ -41,6 +41,6 @@ export const Basic: Story = {
     open: true,
     title: '휴대폰 번호 변경 실패',
     content:
-      '<span style="color: var(--color--warning);">본인 명의의 휴대폰 번호</span>로만\n변경할 수 있어요.',
+      '<span style="color: var(--color--danger);">본인 명의의 휴대폰 번호</span>로만\n변경할 수 있어요.',
   },
 }

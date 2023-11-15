@@ -73,7 +73,7 @@
     }
 
     &--warning {
-      background: var(--color--warning);
+      background: var(--color--danger);
       color: #fff;
     }
 

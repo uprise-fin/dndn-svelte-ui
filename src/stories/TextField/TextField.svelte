@@ -92,7 +92,7 @@
     }
 
     &--error {
-      outline: 1px solid var(--color--warning);
+      outline: 1px solid var(--color--danger);
     }
 
     &__prefix {
@@ -192,7 +192,7 @@
     }
 
     &--error {
-      --color: var(--color--warning);
+      --color: var(--color--danger);
     }
   }
 </style>

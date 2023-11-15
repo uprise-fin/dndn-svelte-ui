@@ -5,7 +5,7 @@
   --main--89: #ddddff;
   --main--50: #6c5efe;
 
-  --main__primary: var(--dd__m--50);
+  --main__primary: var(--main--50);
 
   --main__container--low: var(--main--100);
   --main__container: var(--main--97);
@@ -56,6 +56,5 @@
   --dd__red--500: #ff213f;
 
   --color--primary: var(--main__primary);
-  --color--warning: var(--dd__red--500);
   --color--danger: var(--danger--55);
 }
