@@ -62,22 +62,23 @@
     }
 
     &--secondary {
-      background: var(--main__container);
-      color: var(--main__primary);
+      background: rgba(#e2e2ff, 0.4);
+      // background: rgb(from var(--dd__blurple--100) r g b / 0.4); https://github.com/w3c/csswg-drafts/issues/6880
+      color: var(--dd__blurple--400);
     }
 
     &--tertiary {
-      background: var(--neutral__container--high);
-      color: var(--neutral__tertiary);
+      background: rgba(#e1e1e4, 0.65);
+      color: var(--dd__gray--500);
     }
 
     &--warning {
-      background: var(--color--danger);
+      background: var(--color--warning);
       color: #fff;
     }
 
     &--outline {
-      border: 1px solid var(--neutral__line);
+      border: 1px solid rgba(#e1e1e4, 0.65);
       color: var(--dd__gray--800);
 
       &:disabled {
