@@ -5,26 +5,25 @@
 ### Install
 
 ```bash
-pnpm add @uprise-fin/dndn-svelte-ui
-pnpm add -D sass
+pnpm add -D @uprise-fin/dndn-svelte-ui sass
 ```
 
 ### Import CSS
 
-```javascript
-// +layout.svelte
+**src/routes/+layout.svelte**
 
-<script>import '@uprise-fin/dndn-svelte-ui/src/stories/assets/styles/index.scss'</script>
+```javascript
+import '@uprise-fin/dndn-svelte-ui/src/stories/assets/styles/index.scss'
 ```
 
 ### Basic usage
 
+**src/routes/+page.svelte**
+
 ```javascript
-// YourComponent.svelte
+import { Button } from '@uprise-fin/dndn-svelte-ui/src/stories'
+```
 
-<script>
-  import { Button } from '@uprise-fin/dndn-svelte-ui/src/stories'
-</script>
-
+```html
 <Button on:click={() => alert('Hello World!')}>Button</Button>
 ```
