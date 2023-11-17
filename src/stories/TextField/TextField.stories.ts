@@ -32,7 +32,7 @@ export const Basic: Story = {
     disabled: false,
     placeholder: '플레이스 홀더',
     value: '입력한 정보',
-    description: '설명글',
+    description: ['설명글'],
   },
 }
 
@@ -45,6 +45,6 @@ export const Disabled: Story = {
 
 export const Error: Story = {
   args: {
-    errorMessage: '에러 힌트',
+    errorMessage: ['에러 힌트'],
   },
 }
