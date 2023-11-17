@@ -55,11 +55,11 @@
     </span>
     <span class="input__suffix"><slot /></span>
   </div>
-</div>
 
-{#if !!message}
-  <p class="message" class:message--error={hasError}>{message}</p>
-{/if}
+  {#if !!message}
+    <p class="message" class:message--error={hasError}>{message}</p>
+  {/if}
+</div>
 
 <style lang="scss">
   .input-wrap {
