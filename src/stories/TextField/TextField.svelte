@@ -4,10 +4,10 @@
   export let id = ''
   export let disabled = false
   export let value = ''
-  export let errorMessage: string[] = []
+  export let errorMessages: string[] = []
   export let label = ''
   export let clearable = true
-  export let description: string[] = []
+  export let descriptions: string[] = []
 
   const dispatcher = createEventDispatcher<{
     input: Event & {
@@ -15,7 +15,7 @@
     }
   }>()
 
-  $: hasError = errorMessage.length
+  $: hasError = errorMessages.length
 
   let inputEl: HTMLInputElement
 
@@ -27,7 +27,7 @@
     inputEl.focus()
   }
 
-  $: message = errorMessage[0] || description[0]
+  $: messages = errorMessages.length ? errorMessages : descriptions
 </script>
 
 <div class="input-wrap">
@@ -56,8 +56,12 @@
     <span class="input__suffix"><slot /></span>
   </div>
 
-  {#if !!message}
-    <p class="message" class:message--error={hasError}>{message}</p>
+  {#if !!messages.length}
+    <div class="messages" class:messages--error={hasError}>
+      {#each messages as message}
+        <p class="messages__item">{message}</p>
+      {/each}
+    </div>
   {/if}
 </div>
 
@@ -170,29 +174,33 @@
     }
   }
 
-  .message {
+  .messages {
     --color: var(--dd__gray--300);
-    position: relative;
     margin: 12px 0 0;
-    padding: 0 0 0 14px;
     color: var(--color);
     font-size: 13px;
     line-height: 1.6;
 
-    &::before {
-      --size: 3px;
-      content: '';
-      position: absolute;
-      left: 2.5px;
-      top: 8.5px;
-      width: var(--size);
-      height: var(--size);
-      border-radius: 100%;
-      background: var(--color);
-    }
-
     &--error {
       --color: var(--color--danger);
+    }
+
+    &__item {
+      position: relative;
+      margin: 0;
+      padding: 0 0 0 14px;
+
+      &::before {
+        --size: 3px;
+        content: '';
+        position: absolute;
+        left: 2.5px;
+        top: 8.5px;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 100%;
+        background: var(--color);
+      }
     }
   }
 </style>
