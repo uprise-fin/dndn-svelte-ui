@@ -21,10 +21,15 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.IRUDA_PROD_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.IRUDA_PROD_AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 cp --recursive --region ap-northeast-2 \
-            storybook-static s3://dndn-storybook
-          aws cloudfront create-invalidation \
-            --distribution-id E1LT97U1QASZL8 --paths "/*"
+          aws s3 cp --recursive --region ap-northeast-2 storybook-static s3://dndn-storybook
+
+      - name: Cloudfront Invalidation
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.IRUDA_PROD_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.IRUDA_PROD_AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws cloudfront create-invalidation --distribution-id "E1LT97U1QASZL8" --paths "/*"
+
 
   publish-gpr:
     needs: build
