@@ -23,6 +23,8 @@ jobs:
         run: |
           aws s3 cp --recursive --region ap-northeast-2 \
             storybook-static s3://dndn-storybook
+          aws cloudfront create-invalidation \
+            --distribution-id E1LT97U1QASZL8 --paths "/*"
 
   publish-gpr:
     needs: build
