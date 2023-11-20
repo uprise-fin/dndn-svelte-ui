@@ -4,10 +4,10 @@
   export let id = ''
   export let disabled = false
   export let value = ''
-  export let errorMessages: string[] = []
+  export let errorMessages: string[] | undefined = []
   export let label = ''
   export let clearable = true
-  export let descriptions: string[] = []
+  export let descriptions: string[] | undefined = []
 
   const dispatcher = createEventDispatcher<{
     input: Event & {
@@ -15,7 +15,7 @@
     }
   }>()
 
-  $: hasError = errorMessages.length
+  $: hasError = errorMessages?.length
 
   let inputEl: HTMLInputElement
 
@@ -27,7 +27,7 @@
     inputEl.focus()
   }
 
-  $: messages = errorMessages.length ? errorMessages : descriptions
+  $: messages = errorMessages?.length ? errorMessages : descriptions
 </script>
 
 <div class="input-wrap">
@@ -56,7 +56,7 @@
     <span class="input__suffix"><slot /></span>
   </div>
 
-  {#if !!messages.length}
+  {#if !!messages?.length}
     <div class="messages" class:messages--error={hasError}>
       {#each messages as message}
         <p class="messages__item">{message}</p>
