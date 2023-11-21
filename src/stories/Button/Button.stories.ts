@@ -16,6 +16,9 @@ const meta = {
       control: 'select',
       options: buttonVariant,
     },
+    loading: {
+      description: '중복 클릭 방지를 위한 상태입니다. 외적인 변화는 없습니다.',
+    },
     href: {
       description: 'native 속성입니다. a 요소로 렌더링합니다.',
       table: {
