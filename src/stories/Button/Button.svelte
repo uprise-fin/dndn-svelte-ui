@@ -1,13 +1,21 @@
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte'
   import type { ButtonVariant, HTMLAttributeAnchorTarget } from './type'
 
   export let variant: ButtonVariant = 'primary'
   export let label = ''
+  export let loading = false
   export let href: string | undefined = undefined
   export let target: HTMLAttributeAnchorTarget | undefined = undefined
   export let rel: string | undefined = target === '_blank' ? 'noreferrer noopener' : undefined
 
   const el = href ? 'a' : 'button'
+
+  const dispatch = createEventDispatcher()
+  const handleClick = async (_: Event) => {
+    if (loading) return
+    dispatch('click')
+  }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -18,7 +26,7 @@
   {target}
   {rel}
   class={['button', `button--${variant}`].join(' ')}
-  on:click
+  on:click={handleClick}
 >
   <slot>{label}</slot>
 </svelte:element>
