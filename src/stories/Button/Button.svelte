@@ -65,7 +65,7 @@
     }
 
     &--primary {
-      background: var(--color--primary);
+      background: var(--color--main);
       color: #fff;
     }
 

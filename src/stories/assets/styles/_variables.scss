@@ -1,39 +1,58 @@
 :root {
-  --main--100: #fff;
-  --main--97: #f5f5ff;
-  --main--93: #eaeaff;
-  --main--89: #ddddff;
-  --main--50: #6c5efe;
+  --main-100: #fff;
+  --main-97: #f5f5ff;
+  --main-93: #eaeaff;
+  --main-89: #ddddff;
+  --main-51: #7066f4;
 
-  --main__primary: var(--main--50);
+  --neutral-100: #fff;
+  --neutral-97: #f7f7f8;
+  --neutral-96: #f4f4f6;
+  --neutral-95: #f0f0f2;
+  --neutral-93: #ececee;
+  --neutral-92: #e9e9ec;
+  --neutral-89: #dedee2;
+  --neutral-88: #dcdce0;
+  --neutral-61: #92929e;
+  --neutral-48: #71717f;
+  --neutral-38: #585866;
+  --neutral-23: #353542;
+  --neutral-13: #20202d;
 
-  --main__container--low: var(--main--100);
-  --main__container: var(--main--97);
-  --main__container--high: var(--main--93);
-  --main__container--higher: var(--main--89);
+  --danger-55: #ff2541;
 
-  --neutral--100: #fff;
-  --neutral--97: #f7f6f9;
-  --neutral--93: #ebeaf0;
-  --neutral--89: #dfdfe4;
-  --neutral--60: #8f909c;
-  --neutral--40: #696880;
-  --neutral--25: #383957;
-  --neutral--15: #222340;
+  --color--main: var(--main-51);
+  --color--danger: var(--danger-55);
 
-  --neutral__primary: var(--neutral--15);
-  --neutral__secondary: var(--neutral--25);
-  --neutral__tertiary: var(--neutral--40);
-  --neutral__caption: var(--neutral--60);
-  --neutral__line: var(--neutral--97);
+  --background: var(--neutral-100);
+  --background__neutral: var(--neutral-97);
+  --background__blurple: var(--main-97);
 
-  --neutral__container--low: var(--neutral--100);
-  --neutral__container: var(--neutral--97);
-  --neutral__container--high: var(--neutral--93);
-  --neutral__container--higher: var(--neutral--89);
+  --container__neutral--low: var(--neutral-100);
+  --container__neutral: var(--neutral-97);
+  --container__neutral--high: var(--neutral-93);
+  --container__neutral--higher: var(--neutral-89);
+  --container__blurple--low: var(--main-100);
+  --container__blurple: var(--main-97);
+  --container__blurple--high: var(--main-93);
+  --container__blurple--higher: var(--main-89);
 
-  --danger--55: #ff2541;
+  --button: var(--neutral-95);
+  --button--high: var(--neutral-92);
+  --button--higher: var(--neutral-98);
+  --button--main: var(--color--main);
 
+  --devider: var(--neutral-96);
+  --devider--high: var(--neutral-93);
+
+  --text-primary: var(--neutral-13);
+  --text-secondary: var(--neutral-23);
+  --text-tertiary: var(--neutral-38);
+  --text-quaternary: var(--neutral-48);
+  --text-caption: var(--neutral-61);
+  --text-main: var(--color--main);
+
+  // 컴포넌트 색상이 명확해지만 다음의 색상은 제거 예정
   --dd__blurple--50: #f1f2ff;
   --dd__blurple--100: #e2e2ff;
   --dd__blurple--200: #babaff;
@@ -52,9 +71,4 @@
   --dd__gray--600: #56566c;
   --dd__gray--700: #3d3d57;
   --dd__gray--800: #252542;
-
-  --dd__red--500: #ff213f;
-
-  --color--primary: var(--main__primary);
-  --color--danger: var(--danger--55);
 }
