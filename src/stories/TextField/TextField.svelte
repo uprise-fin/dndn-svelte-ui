@@ -169,8 +169,20 @@
       }
     }
 
-    &__suffix:not(:empty) {
-      margin: 0 0 0 10px;
+    &__suffix {
+      display: grid;
+      place-items: center;
+
+      &:not(:empty) {
+        margin: 0 0 0 10px;
+      }
+
+      :global(.button) {
+        height: 32px;
+        padding: 6px 12px;
+        font-size: 13px;
+        border-radius: 23px;
+      }
     }
   }
 
