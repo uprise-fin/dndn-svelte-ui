@@ -3,6 +3,7 @@
 
   export let id = ''
   export let disabled = false
+  export let readonly = false
   export let value = ''
   export let errorMessages: string[] | undefined = []
   export let label = ''
@@ -34,7 +35,7 @@
   {#if label}
     <label class="input-wrap__label" for={_id}>{label}</label>
   {/if}
-  <div class="input" class:input--error={hasError} class:input--disabled={disabled}>
+  <div class="input" class:input--error={hasError} class:input--disabled={disabled || readonly}>
     <span class="input__prefix">
       <input
         bind:this={inputEl}
@@ -43,11 +44,12 @@
         class="input__el"
         id={_id}
         {disabled}
+        {readonly}
         on:input={(event) => dispatcher('input', event)}
         on:focus
         on:blur
       />
-      {#if clearable && value && !disabled}
+      {#if clearable && value && !disabled && !readonly}
         <button type="button" class="input__clear" on:click={clear}>
           <span class="input__clear-inner">clear</span>
         </button>
@@ -86,17 +88,18 @@
     background: #fff;
     transition: outline 0.1s;
 
-    &:focus-within:not(.input--error) {
+    &:focus-within {
       outline: 1px solid var(--dd__gray--800);
       color: var(--dd__gray--800);
     }
 
     &--disabled {
       background: rgba(#e1e1e4, 0.25);
+      outline-color: rgba(#b0b0ba, 0.5) !important;
     }
 
     &--error {
-      outline: 1px solid var(--color--danger);
+      outline: 1px solid var(--color--danger) !important;
     }
 
     &__prefix {
@@ -120,7 +123,8 @@
       caret-color: var(--dd__blurple--400);
 
       &::placeholder,
-      &:disabled {
+      &:disabled,
+      &:read-only {
         color: var(--dd__gray--300);
       }
     }

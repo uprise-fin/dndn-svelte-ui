@@ -43,6 +43,13 @@ export const Disabled: Story = {
   },
 }
 
+export const Readonly: Story = {
+  args: {
+    readonly: true,
+    value: '입력한 정보',
+  },
+}
+
 export const Error: Story = {
   args: {
     errorMessages: ['에러 힌트'],
