@@ -22,6 +22,9 @@ const meta = {
     keepDialog: {
       description: 'dialog 요소를 닫지 않습니다.',
     },
+    footers: {
+      description: '하단 버튼 영역을 정의합니다. listener prop으로 이벤트를 전달합니다.',
+    },
   },
   parameters: {
     docs: {
@@ -42,5 +45,16 @@ export const Basic: Story = {
     title: '휴대폰 번호 변경 실패',
     content:
       '<span style="color: var(--color--danger);">본인 명의의 휴대폰 번호</span>로만\n변경할 수 있어요.',
+    footers: [
+      {
+        label: '취소',
+        variant: 'tertiary',
+        listener: () => alert('취소 클릭'),
+      },
+      {
+        label: '확인',
+        listener: () => alert('확인 클릭'),
+      },
+    ],
   },
 }

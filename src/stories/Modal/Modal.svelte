@@ -1,6 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
   import { Button } from '..'
+  import type { Footer } from './type'
 
   export let open = false
   export let width = '320px'
@@ -9,6 +10,7 @@
   export let content = ''
   export let disableEscapeKeyDown = false
   export let keepDialog = false
+  export let footers: Footer[] = []
 
   const dispatch = createEventDispatcher<{ close: undefined }>()
 
@@ -43,9 +45,13 @@
     </div>
 
     <menu class="dialog__footer">
-      <slot name="footer">
-        <Button on:click={closeModal}>확인</Button>
-      </slot>
+      {#each footers as footer}
+        <Button {...footer} on:click={footer.listener} />
+      {:else}
+        <slot name="footer">
+          <Button on:click={closeModal}>확인</Button>
+        </slot>
+      {/each}
     </menu>
   </article>
 </div>
