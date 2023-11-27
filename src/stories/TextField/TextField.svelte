@@ -132,7 +132,7 @@
     &__clear {
       --size: 16px;
       all: unset;
-      display: none;
+      opacity: 0;
       flex: 0 0 auto;
       margin: 0 0 0 10px;
       padding: 4px;
@@ -140,7 +140,7 @@
       cursor: pointer;
 
       .input:focus-within & {
-        display: block;
+        opacity: 1;
       }
     }
 
