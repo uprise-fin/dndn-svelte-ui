@@ -5,7 +5,7 @@ import { buttonVariant } from './type'
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const meta = {
-  title: 'Example/Button',
+  title: 'Single Component/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

@@ -4,7 +4,7 @@ import TextField from './TextField.svelte'
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const meta = {
-  title: 'Example/TextField',
+  title: 'Single Component/TextField',
   component: TextField,
   tags: ['autodocs'],
   argTypes: {

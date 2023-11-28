@@ -4,7 +4,7 @@ import Checkbox from './Checkbox.svelte'
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const meta = {
-  title: 'Example/Selection/Checkbox',
+  title: 'Combined Component/Selection Controls/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
   argTypes: {
