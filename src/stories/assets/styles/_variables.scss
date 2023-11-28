@@ -13,6 +13,7 @@
   --neutral-92: #e9e9ec;
   --neutral-89: #dedee2;
   --neutral-88: #dcdce0;
+  --neutral-72: #b0b0b9;
   --neutral-61: #92929e;
   --neutral-48: #71717f;
   --neutral-38: #585866;
@@ -39,7 +40,7 @@
 
   --button: var(--neutral-95);
   --button--high: var(--neutral-92);
-  --button--higher: var(--neutral-98);
+  --button--higher: var(--neutral-88);
   --button--main: var(--color--main);
 
   --devider: var(--neutral-96);
@@ -50,6 +51,7 @@
   --text-tertiary: var(--neutral-38);
   --text-quaternary: var(--neutral-48);
   --text-caption: var(--neutral-61);
+  --text-micro: var(--neutral-72);
   --text-main: var(--color--main);
 
   // 컴포넌트 색상이 명확해지만 다음의 색상은 제거 예정

@@ -8,4 +8,59 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
     subtitle=""
     colors={{ ['--color--main']: '#7066f4', ['--color--danger']: '#ff2541' }}
   />
+  <ColorItem
+    title="Surface (=Background)"
+    subtitle="Surface는 Background 색상을 의미합니다."
+    colors={{
+      ['--background']: '#fff',
+      ['--background__neutral']: '#f7f7f8',
+      ['--background__blurple']: '#f5f5ff',
+    }}
+  />
+  <ColorItem
+    title="Surface / Container"
+    subtitle="Surface Container는 카드 또는 박스 요소에서 사용되는 색상입니다."
+    colors={{
+      ['--container__neutral--low']: '#fff',
+      ['--container__neutral']: '#f7f7f8',
+      ['--container__neutral--high']: '#ececee',
+      ['--container__neutral--higher']: '#dedee2',
+      ['--container__blurple--low']: '#fff',
+      ['--container__blurple']: '#f5f5ff',
+      ['--container__blurple--high']: '#eaeaff',
+      ['--container__blurple--higher']: '#ddddff',
+    }}
+  />
+  <ColorItem
+    title="Surface / Button"
+    subtitle="Container 보다 좀 더 높은 어포던스를 주기 위해 대응되는 Container 보다 +5 증가한 톤 을 사용합니다.
+(ex: 97(surf. container(default)) - 5 = 92(Netural Surf. Button High))"
+    colors={{
+      ['--button']: '#f0f0f2',
+      ['--button--high']: '#e9e9ec',
+      ['--button--higher']: '#dcdce0',
+      ['--button--main']: '#7066f4',
+    }}
+  />
+  <ColorItem
+    title="Surface / Divider"
+    subtitle="대응되는 Surface에 +4톤을 사용합니다."
+    colors={{
+      ['--devider']: '#f4f4f6',
+      ['--devider--high']: '#ececee',
+    }}
+  />
+  <ColorItem
+    title="On Surface/Main"
+    subtitle="*On Surface/Main는 Surface 또는 Main(ex:CTA버튼) 요소에서 사용되는 텍스트 색상입니다."
+    colors={{
+      ['--text-primary']: '#20202d',
+      ['--text-secondary']: '#353542',
+      ['--text-tertiary']: '#585866',
+      ['--text-quaternary']: '#71717f',
+      ['--text-caption']: '#92929e',
+      ['--text-micro']: '#b0b0b9',
+      ['--text-main']: '#7066f4',
+    }}
+  />
 </ColorPalette>
