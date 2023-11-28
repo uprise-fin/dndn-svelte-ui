@@ -3,5 +3,9 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
 <Meta title="Tokens/Colors" />
 
 <ColorPalette>
-  <ColorItem title="Base" subtitle="" colors={{ --color--main: '#7066f4', --color--danger: '#ff2541' }} />
+  <ColorItem
+    title="Base"
+    subtitle=""
+    colors={{ ['--color--main']: '#7066f4', ['--color--danger']: '#ff2541' }}
+  />
 </ColorPalette>
