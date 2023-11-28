@@ -22,26 +22,26 @@
 
   --danger-55: #ff2541;
 
-  --color--main: var(--main-51);
-  --color--danger: var(--danger-55);
+  --color-main: var(--main-51);
+  --color-danger: var(--danger-55);
 
   --background: var(--neutral-100);
-  --background__neutral: var(--neutral-97);
-  --background__blurple: var(--main-97);
+  --background-neutral: var(--neutral-97);
+  --background-blurple: var(--main-97);
 
-  --container__neutral--low: var(--neutral-100);
-  --container__neutral: var(--neutral-97);
-  --container__neutral--high: var(--neutral-93);
-  --container__neutral--higher: var(--neutral-89);
-  --container__blurple--low: var(--main-100);
-  --container__blurple: var(--main-97);
-  --container__blurple--high: var(--main-93);
-  --container__blurple--higher: var(--main-89);
+  --container-neutral--low: var(--neutral-100);
+  --container-neutral: var(--neutral-97);
+  --container-neutral--high: var(--neutral-93);
+  --container-neutral--higher: var(--neutral-89);
+  --container-blurple--low: var(--main-100);
+  --container-blurple: var(--main-97);
+  --container-blurple--high: var(--main-93);
+  --container-blurple--higher: var(--main-89);
 
   --button: var(--neutral-95);
   --button--high: var(--neutral-92);
   --button--higher: var(--neutral-88);
-  --button--main: var(--color--main);
+  --button--main: var(--color-main);
 
   --devider: var(--neutral-96);
   --devider--high: var(--neutral-93);
@@ -52,7 +52,7 @@
   --text-quaternary: var(--neutral-48);
   --text-caption: var(--neutral-61);
   --text-micro: var(--neutral-72);
-  --text-main: var(--color--main);
+  --text-main: var(--color-main);
 
   // 컴포넌트 색상이 명확해지만 다음의 색상은 제거 예정
   --dd__blurple--50: #f1f2ff;
