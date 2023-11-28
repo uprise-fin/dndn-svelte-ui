@@ -65,7 +65,7 @@
     }
 
     &--primary {
-      background: var(--color--main);
+      background: var(--color-main);
       color: #fff;
     }
 
@@ -81,7 +81,7 @@
     }
 
     &--warning {
-      background: var(--color--danger);
+      background: var(--color-danger);
       color: #fff;
     }
 

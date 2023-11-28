@@ -99,7 +99,7 @@
     }
 
     &--error {
-      outline: 1px solid var(--color--danger) !important;
+      outline: 1px solid var(--color-danger) !important;
     }
 
     &__prefix {
@@ -198,7 +198,7 @@
     line-height: 1.6;
 
     &--error {
-      --color: var(--color--danger);
+      --color: var(--color-danger);
     }
 
     &__item {
