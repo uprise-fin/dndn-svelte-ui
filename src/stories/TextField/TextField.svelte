@@ -125,8 +125,7 @@
       &::placeholder,
       &:disabled,
       &:read-only {
-        color: var(--text-tertiary);
-        opacity: 1;
+        -webkit-text-fill-color: var(--text-micro);
       }
     }
 
