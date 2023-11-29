@@ -61,13 +61,13 @@
 
       &:checked {
         + .checkbox__img {
-          --active--color: var(--dd__blurple--400);
+          --active--color: var(--color-main);
         }
       }
     }
 
     &__img {
-      --active--color: rgba(176, 176, 186, 0.5);
+      --active--color: var(--button--higher);
       box-sizing: border-box;
       display: inline-grid;
       place-items: center;

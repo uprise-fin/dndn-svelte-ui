@@ -51,7 +51,7 @@
     }
 
     &:disabled:not(.is-loading) {
-      background: rgba(#b0b0ba, 0.5);
+      background: var(--button--higher);
       color: #fff;
       cursor: not-allowed;
     }
@@ -66,14 +66,13 @@
     }
 
     &--secondary {
-      background: rgba(#e2e2ff, 0.4);
-      // background: rgb(from var(--dd__blurple--100) r g b / 0.4); https://github.com/w3c/csswg-drafts/issues/6880
-      color: var(--dd__blurple--400);
+      background: var(--background-blurple);
+      color: var(--color-main);
     }
 
     &--tertiary {
-      background: rgba(#e1e1e4, 0.65);
-      color: var(--dd__gray--500);
+      background: var(--container-neutral--high);
+      color: var(--text-tertiary);
     }
 
     &--warning {
@@ -82,21 +81,21 @@
     }
 
     &--outline {
-      border: 1px solid rgba(#e1e1e4, 0.65);
-      color: var(--dd__gray--800);
+      border: 1px solid var(--devider--high);
+      color: var(--text-primary);
 
       &:disabled {
         background: transparent;
-        color: rgba(#b0b0ba, 0.5);
+        color: var(--button--higher);
       }
     }
 
     &--text {
-      color: var(--dd__gray--500);
+      color: var(--text-tertiary);
 
       &:disabled {
         background: transparent;
-        color: rgba(#b0b0ba, 0.5);
+        color: var(--button--higher);
       }
     }
   }

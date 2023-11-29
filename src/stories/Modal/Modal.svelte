@@ -120,7 +120,7 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 1.3;
-      color: var(--dd__gray--800);
+      color: var(--text-primary);
     }
 
     &__close {
@@ -145,7 +145,7 @@
         width: 2px;
         height: 16px;
         margin: auto;
-        background: var(--dd__gray--800);
+        background: var(--text-primary);
         border-radius: 4px;
       }
 
@@ -163,7 +163,7 @@
       font-weight: 400;
       font-size: 15px;
       line-height: 1.55;
-      color: var(--dd__gray--600);
+      color: var(--text-tertiary);
     }
 
     &__footer {
