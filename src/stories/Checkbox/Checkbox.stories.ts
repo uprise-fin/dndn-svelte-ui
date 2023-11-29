@@ -9,7 +9,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     checked: {
-      description: 'bind:{property} 형태로 전달하면 양방향 바인딩됩니다.',
+      description: 'bind로 전달하면 양방향으로 바인딩됩니다.',
     },
     size: {
       table: {
