@@ -136,6 +136,7 @@
       flex: 0 0 auto;
       margin: 0 0 0 10px;
       padding: 4px;
+      font-size: 0.1em;
       color: #fff;
       cursor: pointer;
 
