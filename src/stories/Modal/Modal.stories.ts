@@ -23,7 +23,13 @@ const meta = {
       description: 'dialog 요소를 닫지 않습니다.',
     },
     footers: {
-      description: '하단 버튼 영역을 정의합니다. listener prop으로 이벤트를 전달합니다.',
+      description:
+        '하단 버튼 영역을 정의합니다. listener prop으로 이벤트를 전달합니다. 빈 배열로 전달하면 영역이 노출되지 않습니다.',
+      table: {
+        type: {
+          summary: 'string[] | undefined',
+        },
+      },
     },
   },
   parameters: {
