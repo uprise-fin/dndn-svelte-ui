@@ -24,7 +24,7 @@ const meta = {
     },
     footers: {
       description:
-        '하단 버튼 영역을 정의합니다. listener prop으로 이벤트를 전달합니다. 빈 배열로 전달하면 영역이 노출되지 않습니다.',
+        '하단 버튼 영역을 정의합니다. handler prop으로 이벤트를 전달합니다. 빈 배열로 전달하면 영역이 노출되지 않습니다.',
       table: {
         type: {
           summary: 'string[] | undefined',
@@ -55,11 +55,11 @@ export const Basic: Story = {
       {
         label: '취소',
         variant: 'tertiary',
-        listener: () => alert('취소 클릭'),
+        handler: () => alert('취소 클릭'),
       },
       {
         label: '확인',
-        listener: () => alert('확인 클릭'),
+        handler: () => alert('확인 클릭'),
       },
     ],
   },

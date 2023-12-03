@@ -50,7 +50,7 @@
         </slot>
       {:else}
         {#each footers as footer}
-          <Button {...footer} on:click={footer.listener} />
+          <Button {...footer} on:click={footer.handler} />
         {/each}
       {/if}
     </menu>

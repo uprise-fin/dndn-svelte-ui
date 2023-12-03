@@ -1,3 +1,3 @@
 export type Footer = {
-  listener: () => void
+  handler: () => void
 } & Record<string, unknown>
