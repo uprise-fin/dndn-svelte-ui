@@ -8,7 +8,6 @@
   export let toast = false
   export let title = ''
   export let content = ''
-  export let disableEscapeKeyDown = false
   export let keepDialog = false
   export let showCloseButton = true
   export let footers: Footer[] | undefined = undefined
@@ -16,13 +15,12 @@
   const dispatch = createEventDispatcher<{ close: undefined }>()
 
   const closeModal = () => {
-    if (keepDialog) return
     open = false
     dispatch('close')
   }
 
   const handleClick = () => {
-    !disableEscapeKeyDown && closeModal()
+    !keepDialog && closeModal()
   }
 </script>
 
@@ -35,7 +33,7 @@
     <header class="dialog__header">
       <h1 class="dialog__title">{title}</h1>
       {#if !keepDialog && showCloseButton}
-        <button class="dialog__close" on:click={closeModal}>닫기</button>
+        <button class="dialog__close" on:click={handleClick}>닫기</button>
       {/if}
     </header>
 
