@@ -11,7 +11,7 @@
   export let disableEscapeKeyDown = false
   export let keepDialog = false
   export let showCloseButton = true
-  export let footers: Footer[] = []
+  export let footers: Footer[] | undefined = undefined
 
   const dispatch = createEventDispatcher<{ close: undefined }>()
 
@@ -46,13 +46,15 @@
     </div>
 
     <menu class="dialog__footer">
-      {#each footers as footer}
-        <Button {...footer} on:click={footer.listener} />
-      {:else}
+      {#if !footers}
         <slot name="footer">
-          <Button on:click={closeModal}>확인</Button>
+          <Button on:click={closeModal} variant="outline">확인</Button>
         </slot>
-      {/each}
+      {:else}
+        {#each footers as footer}
+          <Button {...footer} on:click={footer.listener} />
+        {/each}
+      {/if}
     </menu>
   </article>
 </div>
