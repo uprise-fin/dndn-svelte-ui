@@ -111,7 +111,7 @@
     &__el {
       box-sizing: border-box;
       width: 100%;
-      height: 50px;
+      height: 54px;
       padding-block: var(--padding);
       background: none;
       border: 0;

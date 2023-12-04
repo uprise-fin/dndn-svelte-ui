@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { ButtonVariant, HTMLAttributeAnchorTarget } from './type'
 
+  export let bgcolor = ''
   export let variant: ButtonVariant = 'primary'
   export let label = ''
   export let disabled = false
@@ -30,7 +31,7 @@
 <style lang="scss">
   .button {
     all: unset;
-    height: 50px;
+    height: 54px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
