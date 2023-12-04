@@ -31,9 +31,9 @@
   .button {
     all: unset;
     height: 50px;
-    display: inline-grid;
-    place-items: center;
-    grid-auto-flow: column;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     gap: 4px;
     white-space: nowrap;
     box-sizing: border-box;
