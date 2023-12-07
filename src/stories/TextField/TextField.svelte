@@ -116,16 +116,19 @@
       background: none;
       border: 0;
       outline: 0;
-      font-weight: 500;
       font-size: 15px;
       line-height: 1.2;
       color: var(--text-primary);
       caret-color: var(--color-main);
 
-      &::placeholder,
-      &:disabled,
-      &:read-only {
+      &::placeholder {
         -webkit-text-fill-color: var(--text-micro);
+      }
+      &:disabled {
+        -webkit-text-fill-color: var(--text-micro);
+      }
+      &:read-only {
+        -webkit-text-fill-color: var(--text-secondary);
       }
     }
 
@@ -177,6 +180,7 @@
     &__suffix {
       display: grid;
       place-items: center;
+      color: var(--text-caption);
 
       &:not(:empty) {
         margin: 0 0 0 10px;

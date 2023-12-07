@@ -73,7 +73,7 @@
 
     &--tertiary {
       background: var(--container-neutral--high);
-      color: var(--text-tertiary);
+      color: var(--text-quaternary);
     }
 
     &--warning {
