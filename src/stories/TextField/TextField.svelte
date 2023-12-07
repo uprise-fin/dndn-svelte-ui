@@ -124,11 +124,11 @@
       &::placeholder {
         -webkit-text-fill-color: var(--text-micro);
       }
-      &:disabled {
-        -webkit-text-fill-color: var(--text-micro);
-      }
       &:read-only {
         -webkit-text-fill-color: var(--text-secondary);
+      }
+      &:disabled {
+        -webkit-text-fill-color: var(--text-micro);
       }
     }
 
