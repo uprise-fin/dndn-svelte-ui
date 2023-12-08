@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { ButtonVariant, HTMLAttributeAnchorTarget } from './type'
 
-  export let bgcolor = ''
   export let variant: ButtonVariant = 'primary'
   export let label = ''
   export let disabled = false
