@@ -102,8 +102,8 @@
         min-width: auto;
         max-width: 100%;
         max-height: 100%;
-        width: 100%;
-        margin: 0;
+        width: var(--width);
+        margin: 0 auto;
         border-end-end-radius: 0;
         border-end-start-radius: 0;
         animation: toast 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
