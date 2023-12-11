@@ -84,14 +84,9 @@
       overflow: auto;
       box-sizing: border-box;
       position: relative;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      width: var(--width);
-      max-width: calc((100% - 6px) - 2em);
+      width: min(calc((100% - 6px) - 2em), var(--width));
       max-height: calc((100% - 6px) - 2em);
+      margin: auto;
       padding: 28px 20px;
       border-radius: 16px;
       background: #fff;
@@ -99,14 +94,12 @@
 
       .dialog--toast & {
         align-self: flex-end;
-        min-width: auto;
-        max-width: 100%;
         max-height: 100%;
-        width: var(--width);
-        margin: 0 auto;
+        width: min(100%, var(--width));
+        margin-bottom: 0;
         border-end-end-radius: 0;
         border-end-start-radius: 0;
-        animation: toast 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-name: toast;
       }
     }
 
