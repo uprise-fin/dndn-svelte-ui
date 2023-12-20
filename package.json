@@ -7,8 +7,7 @@
   },
   "files": [
     "src/lib/**",
-    "src/stories/**",
-    "src/app.d.ts"
+    "src/stories/**"
   ],
   "repository": {
     "type": "git",
