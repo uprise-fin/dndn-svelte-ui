@@ -6,7 +6,9 @@
     "node": ">=16"
   },
   "files": [
-    "src/stories/**"
+    "src/lib/**",
+    "src/stories/**",
+    "src/app.d.ts"
   ],
   "repository": {
     "type": "git",
