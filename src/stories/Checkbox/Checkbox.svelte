@@ -26,7 +26,7 @@
 
 <style lang="scss">
   .checkbox {
-    display: inline-block;
+    display: inline-grid;
 
     &.is-rounded {
       .checkbox {
