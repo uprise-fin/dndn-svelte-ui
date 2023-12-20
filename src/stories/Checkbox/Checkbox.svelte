@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { Icon } from '..'
+
   export let checked = false
   export let rounded = false
   export let size: 'medium' = 'medium'
@@ -7,20 +9,7 @@
 <span class={`checkbox checkbox--${size}`} class:is-rounded={rounded}>
   <input class="checkbox__el" type="checkbox" {...$$restProps} bind:checked on:change />
   <i class="checkbox__img" style={`--color: var(--active--color)`}>
-    <svg
-      class="checkbox__svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        class="checkbox__path"
-        d="M17.4697 7.46967C17.7626 7.17678 18.2374 7.17678 18.5303 7.46967C18.7966 7.73594 18.8208 8.1526 18.6029 8.44621L18.5303 8.53033L10.5303 16.5303C10.2641 16.7966 9.8474 16.8208 9.55379 16.6029L9.46967 16.5303L5.46967 12.5303C5.17678 12.2374 5.17678 11.7626 5.46967 11.4697C5.73594 11.2034 6.1526 11.1792 6.44621 11.3971L6.53033 11.4697L10 14.939L17.4697 7.46967Z"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
+    <Icon src="system/check" color="var(--active--color)" />
   </i>
 </span>
 
@@ -39,8 +28,8 @@
           + .checkbox__img {
             background: var(--active--color);
 
-            .checkbox__path {
-              fill: #fff;
+            :global(path) {
+              stroke: #fff;
             }
           }
         }
