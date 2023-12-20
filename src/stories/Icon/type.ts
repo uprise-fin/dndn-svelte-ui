@@ -4,4 +4,4 @@ export type IconName =
   | 'system/close'
   | 'system/down'
   | 'system/forward'
-  | 'system/up';
+  | 'system/up'

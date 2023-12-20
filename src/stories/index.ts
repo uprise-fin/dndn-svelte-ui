@@ -1,6 +1,6 @@
-export * from './Button/type'
 export { default as Button } from './Button/Button.svelte'
+export * from './Button/type'
 export { default as Checkbox } from './Checkbox/Checkbox.svelte'
+export { default as Icon } from './Icon/Icon.svelte'
 export { default as Modal } from './Modal/Modal.svelte'
 export { default as TextField } from './TextField/TextField.svelte'
-export { default as Icon } from './Icon/Icon.svelte'

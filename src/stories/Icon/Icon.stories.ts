@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/svelte'
-import SVG from './svg'
-import Icon from './Icon.svelte'
 import { size } from '$lib'
+import type { Meta, StoryObj } from '@storybook/svelte'
+import Icon from './Icon.svelte'
+import SVG from './svg'
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const iconSource = Object.keys(SVG)

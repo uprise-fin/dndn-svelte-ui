@@ -27,7 +27,7 @@ fs.writeFile(
   'src/stories/Icon/type.ts',
   `export type IconName =${iconName
     .map((x, i) => `${i === 0 ? '\n' : ''}  | '${x}'`)
-    .join('\n')};\n`,
+    .join('\n')}\n`,
   () => {
     console.log('Complete conversion of type file to text')
   },
