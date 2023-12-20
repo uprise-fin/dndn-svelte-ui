@@ -23,6 +23,7 @@
     "storybook"
   ],
   "scripts": {
+    "svg": "node svg/assetsToJs.js",
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
@@ -31,8 +32,8 @@
     "test": "vitest",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "pnpm svg && storybook dev -p 6006",
+    "build-storybook": "pnpm svg && storybook build"
   },
   "peerDependencies": {
     "sass": "^1.69.5"
