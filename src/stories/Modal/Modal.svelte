@@ -11,6 +11,7 @@
   export let keepDialog = false
   export let showCloseButton = true
   export let footers: Footer[] | undefined = undefined
+  export let isVerticalLayout = false
 
   const dispatch = createEventDispatcher<{ close: undefined }>()
 
@@ -25,9 +26,7 @@
 </script>
 
 <div class="dialog" class:is-open={open} class:dialog--toast={toast} style={`--width: ${width};`}>
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <span class="dialog__backdrop" on:click={handleClick} />
+  <span class="dialog__backdrop" aria-hidden="true" on:click={handleClick} />
 
   <article class="dialog__container">
     <header class="dialog__header">
@@ -43,7 +42,7 @@
       </slot>
     </div>
 
-    <menu class="dialog__footer">
+    <menu class="dialog__footer" class:dialog__footer--vertical={isVerticalLayout}>
       {#if !footers}
         <slot name="footer">
           <Button on:click={closeModal} variant="outline">확인</Button>
@@ -160,8 +159,9 @@
     }
 
     &__footer {
+      --gap: 8px;
       display: flex;
-      gap: 8px;
+      gap: var(--gap);
       margin: 0;
       padding: 0;
 
@@ -173,8 +173,16 @@
         flex: 1 1 0;
       }
 
+      :global(.button--text:not(:first-child)) {
+        margin-top: calc(-1 * var(--gap));
+      }
+
       :global([slot='footer']) {
         display: contents;
+      }
+
+      &--vertical {
+        flex-flow: column;
       }
     }
   }

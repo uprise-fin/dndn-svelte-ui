@@ -26,11 +26,14 @@ const meta = {
         },
       },
     },
+    isVerticalLayout: {
+      description: '하단 버튼 영역의 방향을 결정합니다. 기본은 가로 방향(수평)입니다.',
+    },
   },
   parameters: {
     docs: {
       story: {
-        height: '300px',
+        height: '400px',
       },
     },
   },
