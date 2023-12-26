@@ -10,7 +10,7 @@
   export let content = ''
   export let keepDialog = false
   export let showCloseButton = true
-  export let footers: Footer[] | undefined = undefined
+  export let footers: Partial<Footer>[] | undefined = undefined
   export let isVerticalLayout = false
 
   const dispatch = createEventDispatcher<{ close: undefined }>()

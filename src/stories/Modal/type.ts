@@ -2,7 +2,7 @@ import type { ButtonOptions } from '../Button/type'
 
 export type Footer = {
   handler: () => void
-} & Partial<ButtonOptions> &
+} & ButtonOptions &
   Record<string, unknown>
 
 export type ModalOptions = {
@@ -14,5 +14,5 @@ export type ModalOptions = {
   keepDialog: boolean
   showCloseButton: boolean
   isVerticalLayout: boolean
-  footers: Footer[]
+  footers: Partial<Footer>[]
 }
