@@ -2,7 +2,7 @@ export type Footer = {
   handler: () => void
 } & Record<string, unknown>
 
-export type Modal = {
+export type ModalOptions = {
   open: boolean
   width: string
   toast: boolean
