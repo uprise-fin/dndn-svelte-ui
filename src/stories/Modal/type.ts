@@ -2,7 +2,7 @@ import type { ButtonOptions } from '../Button/type'
 
 export type Footer = {
   handler: () => void
-} & ButtonOptions &
+} & Partial<ButtonOptions> &
   Record<string, unknown>
 
 export type ModalOptions = {
