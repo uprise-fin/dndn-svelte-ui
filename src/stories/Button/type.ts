@@ -10,3 +10,13 @@ export const buttonVariant = [
   'text',
 ] as const
 export type ButtonVariant = typeof buttonVariant[number]
+
+export type ButtonOptions = {
+  variant: ButtonVariant
+  label: string
+  disabled: boolean
+  loading: boolean
+  href: string
+  target: HTMLAttributeAnchorTarget
+  rel: string
+}

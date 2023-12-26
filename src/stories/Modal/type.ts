@@ -1,6 +1,9 @@
+import type { ButtonOptions } from '../Button/type'
+
 export type Footer = {
   handler: () => void
-} & Record<string, unknown>
+} & ButtonOptions &
+  Record<string, unknown>
 
 export type ModalOptions = {
   open: boolean
