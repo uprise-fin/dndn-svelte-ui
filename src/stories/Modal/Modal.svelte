@@ -30,7 +30,7 @@
 
   <article class="dialog__container">
     <header class="dialog__header">
-      <h1 class="dialog__title">{title}</h1>
+      <h1 class="dialog__title">{@html title}</h1>
       {#if !keepDialog && showCloseButton}
         <button class="dialog__close" on:click={handleClick}>닫기</button>
       {/if}
