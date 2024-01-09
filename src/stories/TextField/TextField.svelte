@@ -33,7 +33,9 @@
 
 <div class="input-wrap">
   {#if label}
-    <label class="input-wrap__label" for={_id}>{label}</label>
+    <label class="input-wrap__label" class:input-wrap__label--error={hasError} for={_id}>
+      {label}
+    </label>
   {/if}
   <div class="input" class:input--error={hasError} class:input--disabled={disabled || readonly}>
     <span class="input__prefix">
@@ -69,12 +71,19 @@
 
 <style lang="scss">
   .input-wrap {
+    --color: var(--text-secondary);
+
     &__label {
       display: block;
       margin: 0 0 12px;
+      font-weight: 600;
       font-size: 13px;
       line-height: 1.3;
-      color: var(--text-tertiary);
+      color: var(--color);
+
+      &--error {
+        --color: var(--color-danger);
+      }
     }
   }
 
@@ -83,19 +92,19 @@
     display: flex;
     align-items: center;
     padding-inline: var(--padding);
-    outline: 1px solid var(--button--higher);
+    outline: 1px solid transparent;
     border-radius: 8px;
-    background: #fff;
+    background: var(--background-neutral);
     transition: outline 0.1s;
 
     &:focus-within {
       outline: 1px solid var(--text-primary);
+      background: var(--background);
       color: var(--text-primary);
     }
 
     &--disabled {
-      background: var(--container-neutral);
-      outline-color: var(--button--higher) !important;
+      background: var(--neutral-94);
     }
 
     &--error {
@@ -116,10 +125,10 @@
       background: none;
       border: 0;
       outline: 0;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.2;
-      color: var(--text-primary);
-      caret-color: var(--color-main);
+      color: var(--text-secondary);
+      caret-color: var(--text-secondary);
 
       &::placeholder {
         -webkit-text-fill-color: var(--text-micro);
@@ -196,7 +205,7 @@
   }
 
   .messages {
-    --color: var(--text-micro);
+    --color: var(--text-caption);
     margin: 12px 0 0;
     color: var(--color);
     font-size: 13px;

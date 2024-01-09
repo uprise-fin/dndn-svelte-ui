@@ -52,6 +52,7 @@ export const Readonly: Story = {
 
 export const Error: Story = {
   args: {
+    label: '라벨',
     errorMessages: ['에러 힌트'],
   },
 }
