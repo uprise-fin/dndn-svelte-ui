@@ -1,18 +1,20 @@
 :root {
   --main-100: #fff;
-  --main-97: #f5f5ff;
+  --main-97: #f7f6fe;
   --main-93: #eaeaff;
-  --main-89: #ddddff;
+  --main-89: #dfddfd;
   --main-51: #7066f4;
 
   --neutral-100: #fff;
   --neutral-97: #f7f7f8;
-  --neutral-96: #f4f4f6;
+  --neutral-96: #f4f4f5;
   --neutral-95: #f0f0f2;
-  --neutral-93: #ececee;
-  --neutral-92: #e9e9ec;
+  --neutral-94: #efeff0;
+  --neutral-93: #ebe9fd;
+  --neutral-92: #e8e8eb;
   --neutral-89: #dedee2;
   --neutral-88: #dcdce0;
+  --neutral-84: #d1d1d6;
   --neutral-72: #b0b0b9;
   --neutral-61: #92929e;
   --neutral-48: #71717f;
@@ -38,6 +40,7 @@
   --container-blurple--high: var(--main-93);
   --container-blurple--higher: var(--main-89);
 
+  --button--low: var(--neutral-100);
   --button: var(--neutral-95);
   --button--high: var(--neutral-92);
   --button--higher: var(--neutral-88);
@@ -45,6 +48,11 @@
 
   --divider: var(--neutral-96);
   --divider--high: var(--neutral-93);
+  --divider--higher: var(--neutral-88);
+  --divider--highest: var(--neutral-84);
+  --divider-main: var(--main-51);
+  --divider-primary: var(--neutral-13);
+  --divider-danger: var(--danger-55);
 
   --text-primary: var(--neutral-13);
   --text-secondary: var(--neutral-23);
@@ -53,4 +61,5 @@
   --text-caption: var(--neutral-61);
   --text-micro: var(--neutral-72);
   --text-main: var(--color-main);
+  --text-danger: var(--color-danger);
 }

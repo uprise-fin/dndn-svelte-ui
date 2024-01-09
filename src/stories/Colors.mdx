@@ -16,7 +16,7 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
     colors={{
       ['--background']: '#fff',
       ['--background-neutral']: '#f7f7f8',
-      ['--background-blurple']: '#f5f5ff',
+      ['--background-blurple']: '#f7f6fe',
     }}
   />
 
@@ -26,7 +26,7 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
     colors={{
       ['--container-neutral--low']: '#fff',
       ['--container-neutral']: '#f7f7f8',
-      ['--container-neutral--high']: '#ececee',
+      ['--container-neutral--high']: '#ebe9fd',
       ['--container-neutral--higher']: '#dedee2',
     }}
   />
@@ -35,27 +35,45 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
     subtitle=""
     colors={{
       ['--container-blurple--low']: '#fff',
-      ['--container-blurple']: '#f5f5ff',
+      ['--container-blurple']: '#f7f6fe',
       ['--container-blurple--high']: '#eaeaff',
-      ['--container-blurple--higher']: '#ddddff',
+      ['--container-blurple--higher']: '#dfddfd',
     }}
   />
   <ColorItem
     title="Surface / Button"
     subtitle="Container 보다 좀 더 높은 어포던스를 주기 위해 대응되는 Container 보다 +5 증가한 톤 을 사용합니다. (ex: 97(surf. container(default)) - 5 = 92(Netural Surf. Button High))"
     colors={{
+      ['--button--row']: '#fff',
       ['--button']: '#f0f0f2',
-      ['--button--high']: '#e9e9ec',
+      ['--button--high']: '#e8e8eb',
       ['--button--higher']: '#dcdce0',
+    }}
+  />
+  <ColorItem
+    title=""
+    subtitle=""
+    colors={{
       ['--button-main']: '#7066f4',
     }}
   />
   <ColorItem
-    title="Surface / Divider"
+    title="Surface / Outline"
     subtitle="대응되는 Surface에 +4톤을 사용합니다."
     colors={{
-      ['--divider']: '#f4f4f6',
-      ['--divider--high']: '#ececee',
+      ['--divider']: '#f4f4f5',
+      ['--divider--high']: '#ebe9fd',
+      ['--divider--higher']: '#dcdce0',
+      ['--divider--highest']: '#ebe9fd',
+    }}
+  />
+  <ColorItem
+    title=""
+    subtitle=""
+    colors={{
+      ['--divider-main']: '#7066f4',
+      ['--divider-primary']: '#20202d',
+      ['--divider-danger']: '#ff2541',
     }}
   />
   <ColorItem
@@ -68,7 +86,14 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
       ['--text-quaternary']: '#71717f',
       ['--text-caption']: '#92929e',
       ['--text-micro']: '#b0b0b9',
+    }}
+  />
+  <ColorItem
+    title=""
+    subtitle=""
+    colors={{
       ['--text-main']: '#7066f4',
+      ['--text-danger']: '#ff2541',
     }}
   />
 </ColorPalette>
