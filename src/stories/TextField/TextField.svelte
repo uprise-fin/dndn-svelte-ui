@@ -97,7 +97,7 @@
     background: var(--background-neutral);
     transition: outline 0.1s;
 
-    &:focus-within {
+    &:focus-within:not(.input--disabled) {
       outline: 1px solid var(--text-primary);
       background: var(--background);
       color: var(--text-primary);
@@ -129,13 +129,10 @@
       line-height: 1.2;
       color: var(--text-secondary);
       caret-color: var(--text-secondary);
-
-      &::placeholder {
-        -webkit-text-fill-color: var(--text-micro);
-      }
       &:read-only {
         -webkit-text-fill-color: var(--text-secondary);
       }
+      &::placeholder,
       &:disabled {
         -webkit-text-fill-color: var(--text-micro);
       }
