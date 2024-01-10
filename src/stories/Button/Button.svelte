@@ -81,7 +81,7 @@
     }
 
     &--outline {
-      border: 1px solid var(--divider--high);
+      border: 1px solid var(--outline--high);
       color: var(--text-primary);
 
       &:disabled {

@@ -46,13 +46,17 @@
   --button--higher: var(--neutral-88);
   --button-main: var(--color-main);
 
+  // divider token is deprecated
   --divider: var(--neutral-96);
   --divider--high: var(--neutral-93);
-  --divider--higher: var(--neutral-88);
-  --divider--highest: var(--neutral-84);
-  --divider-main: var(--main-51);
-  --divider-primary: var(--neutral-13);
-  --divider-danger: var(--danger-55);
+
+  --outline: var(--neutral-96);
+  --outline--high: var(--neutral-93);
+  --outline--higher: var(--neutral-88);
+  --outline--highest: var(--neutral-84);
+  --outline-main: var(--main-51);
+  --outline-primary: var(--neutral-13);
+  --outline-danger: var(--danger-55);
 
   --text-primary: var(--neutral-13);
   --text-secondary: var(--neutral-23);
