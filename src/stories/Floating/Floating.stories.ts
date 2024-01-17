@@ -22,6 +22,9 @@ const meta = {
   },
   parameters: {
     docs: {
+      description: {
+        component: '화면 하단에 고정되는 버튼입니다.',
+      },
       story: {
         height: '200px',
       },
