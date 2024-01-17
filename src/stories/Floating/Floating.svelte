@@ -66,7 +66,7 @@
       padding: 0 var(--side-width) 30px;
       background: var(--background);
 
-      :global(.button) {
+      :global(.button:not(.is-fit)) {
         flex: 1 1 0;
       }
 

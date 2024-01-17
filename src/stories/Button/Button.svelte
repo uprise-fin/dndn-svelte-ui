@@ -5,6 +5,7 @@
   export let label = ''
   export let disabled = false
   export let loading = false
+  export let isFit = false
   export let href: string | undefined = undefined
   export let target: HTMLAttributeAnchorTarget | undefined = undefined
   export let rel: string | undefined = target === '_blank' ? 'noreferrer noopener' : undefined
@@ -22,6 +23,7 @@
   disabled={disabled || loading}
   class={['button', `button--${variant}`].join(' ')}
   class:is-loading={loading}
+  class:is-fit={isFit}
   on:click
 >
   <slot>{label}</slot>

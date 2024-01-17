@@ -19,4 +19,5 @@ export type ButtonOptions = {
   href: string
   target: HTMLAttributeAnchorTarget
   rel: string
+  isFit: boolean
 }

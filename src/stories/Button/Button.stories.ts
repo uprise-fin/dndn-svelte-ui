@@ -36,6 +36,11 @@ const meta = {
         disable: true,
       },
     },
+    isFit: {
+      table: {
+        disable: true,
+      },
+    },
   },
 } satisfies Meta<Button>
 
