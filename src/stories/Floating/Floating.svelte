@@ -1,6 +1,6 @@
 <script lang="ts">
+  import { GroupButton } from '$lib/components'
   import { onMount } from 'svelte'
-  import Button from '../Button/Button.svelte'
   import type { Footer } from '../Modal/type'
 
   export let isVerticalLayout = false
@@ -19,15 +19,10 @@
     <div class="floating__body">
       <slot />
     </div>
-    <div class="floating__footer" class:floating__footer--vertical={isVerticalLayout}>
-      {#if !footers}
-        <slot name="footer" />
-      {:else}
-        {#each footers as footer}
-          <Button {...footer} on:click={footer.handler} />
-        {/each}
-      {/if}
-    </div>
+
+    <GroupButton {footers} {isVerticalLayout}>
+      <slot name="footer" />
+    </GroupButton>
   </div>
 </div>
 
@@ -56,27 +51,6 @@
     &__body:not(:empty) {
       margin: 0 0 24px;
       padding: 0 var(--side-width);
-    }
-
-    &__footer {
-      --gap: 8px;
-      display: flex;
-      gap: var(--gap);
-      margin: 0;
-      padding: 0 var(--side-width) 30px;
-      background: var(--background);
-
-      :global(.button:not(.is-fit)) {
-        flex: 1 1 0;
-      }
-
-      :global(.button--text:not(:first-child)) {
-        margin-top: calc(-1 * var(--gap));
-      }
-
-      &--vertical {
-        flex-flow: column;
-      }
     }
   }
 </style>

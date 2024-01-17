@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { GroupButton } from '$lib/components'
   import { createEventDispatcher } from 'svelte'
   import { Button } from '..'
   import type { Footer } from './type'
@@ -42,17 +43,13 @@
       </slot>
     </div>
 
-    <menu class="dialog__footer" class:dialog__footer--vertical={isVerticalLayout}>
+    <GroupButton {footers} {isVerticalLayout}>
       {#if !footers}
         <slot name="footer">
           <Button on:click={closeModal} variant="outline">확인</Button>
         </slot>
-      {:else}
-        {#each footers as footer}
-          <Button {...footer} on:click={footer.handler} />
-        {/each}
       {/if}
-    </menu>
+    </GroupButton>
   </article>
 </div>
 
@@ -158,32 +155,8 @@
       color: var(--text-tertiary);
     }
 
-    &__footer {
-      --gap: 8px;
-      display: flex;
-      gap: var(--gap);
-      margin: 0;
-      padding: 0;
-
-      &:not(:empty) {
-        margin-top: 24px;
-      }
-
-      :global(.button) {
-        flex: 1 1 0;
-      }
-
-      :global(.button--text:not(:first-child)) {
-        margin-top: calc(-1 * var(--gap));
-      }
-
-      :global([slot='footer']) {
-        display: contents;
-      }
-
-      &--vertical {
-        flex-flow: column;
-      }
+    :global(.group-button:not(:empty)) {
+      margin-top: 24px;
     }
   }
 
