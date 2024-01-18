@@ -1,21 +1,9 @@
 <script lang="ts">
-  import { tick } from 'svelte'
-  import { writable } from 'svelte/store'
   import { fade } from 'svelte/transition'
+  import { _duration } from './store'
 
   export let delay = 2000
-  export let duration = 500
   export let message = ''
-
-  const toast = writable('')
-  const _duration = writable(duration)
-
-  export const showToast = async (message = '') => {
-    toast.set(message)
-    _duration.set(duration)
-    await tick()
-    toast.set('')
-  }
 </script>
 
 {#if message}
