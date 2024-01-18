@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { GroupButton } from '$lib/components'
   import { onMount } from 'svelte'
+  import { GroupButton } from '../../lib/components'
   import type { Footer } from '../Modal/type'
 
   export let isVerticalLayout = false

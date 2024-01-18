@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { GroupButton } from '$lib/components'
   import { createEventDispatcher } from 'svelte'
   import { Button } from '..'
+  import { GroupButton } from '../../lib/components'
   import type { Footer } from './type'
 
   export let open = false
