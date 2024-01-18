@@ -3,7 +3,7 @@ import { writable } from 'svelte/store'
 
 const defaultDuration = 500
 
-export const toast = writable('Hello')
+export const toast = writable('')
 export const durationObserver = writable(defaultDuration)
 
 export const showToast = async (message = '', duration = defaultDuration) => {
