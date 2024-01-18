@@ -1,15 +1,14 @@
 <script lang="ts">
   import { fade } from 'svelte/transition'
-  import { _duration } from './store'
+  import { durationObserver, toast as message } from './store'
 
   export let delay = 2000
-  export let message = ''
 </script>
 
-{#if message}
-  <aside class="toast" out:fade={{ duration: $_duration, delay }}>
+{#if $message}
+  <aside class="toast" out:fade={{ duration: $durationObserver, delay }}>
     <p class="toast__content">
-      {message}
+      {$message}
     </p>
   </aside>
 {/if}

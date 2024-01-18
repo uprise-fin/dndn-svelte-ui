@@ -7,11 +7,8 @@ const meta = {
   component: Snackbar,
   tags: ['autodocs'],
   argTypes: {
-    message: {
-      description: 'showToast(message, duration?) 함수를 호출하는 형태로 사용합니다.',
-    },
     delay: {
-      description: '최초에 지속적으로 노출되는 시간을 설정합니다.',
+      description: 'ms 단위이며 노출되는 시간을 결정합니다.',
     },
   },
   parameters: {
@@ -26,8 +23,4 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Basic: Story = {
-  args: {
-    message: '텍스트 입력',
-  },
-}
+export const Basic: Story = {}
