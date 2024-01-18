@@ -13,6 +13,10 @@ const meta = {
   },
   parameters: {
     docs: {
+      description: {
+        component:
+          '+layout.svelte에 Snackbar 컴포넌트를 넣고 showToast(message, duration?) 함수를 호출하여 사용합니다.',
+      },
       story: {
         height: '100px',
       },
