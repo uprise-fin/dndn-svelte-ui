@@ -52,5 +52,9 @@
       margin: 0 0 24px;
       padding: 0 var(--side-width);
     }
+
+    :global(.group-button) {
+      padding: 0 var(--side-width) 30px;
+    }
   }
 </style>

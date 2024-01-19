@@ -20,8 +20,6 @@
     --gap: 8px;
     display: flex;
     gap: var(--gap);
-    margin: 0;
-    padding: 0 var(--side-width) 30px;
     background: var(--background);
 
     :global(.button:not(.is-fit)) {
