@@ -55,7 +55,7 @@
 
 <style lang="scss">
   .dialog {
-    display: none;
+    visibility: hidden;
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -64,6 +64,7 @@
     bottom: 0;
 
     &.is-open {
+      visibility: visible;
       display: flex;
     }
 
@@ -86,7 +87,10 @@
       padding: 28px 20px;
       border-radius: 16px;
       background: #fff;
-      animation: blowUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      .is-open & {
+        animation: blowUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
 
       .dialog--toast & {
         align-self: flex-end;
@@ -95,6 +99,9 @@
         margin-bottom: 0;
         border-end-end-radius: 0;
         border-end-start-radius: 0;
+      }
+
+      .is-open.dialog--toast & {
         animation-name: toast;
       }
     }
