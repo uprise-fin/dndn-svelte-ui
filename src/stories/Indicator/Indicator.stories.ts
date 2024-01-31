@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import Indicator from './Indicator.svelte'
 
 const meta = {
-  title: 'Single Component/Indicator',
+  title: 'Indicator',
   component: Indicator,
   tags: ['autodocs'],
   argTypes: {

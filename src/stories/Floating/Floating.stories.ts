@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import Floating from './Floating.svelte'
 
 const meta = {
-  title: 'Combined Component/Floating',
+  title: 'Floating',
   component: Floating,
   tags: ['autodocs'],
   argTypes: {

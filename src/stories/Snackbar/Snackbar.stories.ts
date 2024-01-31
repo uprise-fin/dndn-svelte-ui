@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/svelte'
 import Snackbar from './Snackbar.svelte'
 
 const meta = {
-  title: 'Combined Component/Snackbar',
+  title: 'Snackbar',
   component: Snackbar,
   tags: ['autodocs'],
   argTypes: {

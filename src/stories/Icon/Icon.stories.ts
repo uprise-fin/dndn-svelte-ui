@@ -6,7 +6,7 @@ import SVG from './svg'
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const iconSource = Object.keys(SVG)
 const meta = {
-  title: 'Single Component/Icons',
+  title: 'Icons',
   component: Icon,
   tags: ['autodocs'],
   argTypes: {
