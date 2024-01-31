@@ -94,6 +94,7 @@
       opacity: 0.7;
       align-self: flex-start;
       padding: 3px 0;
+      cursor: pointer;
     }
   }
 
