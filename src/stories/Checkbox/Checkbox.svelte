@@ -9,7 +9,7 @@
 <span class={`checkbox checkbox--${size}`} class:is-rounded={rounded}>
   <input class="checkbox__el" type="checkbox" {...$$restProps} bind:checked on:change />
   <i class="checkbox__img" style={`--color: var(--active--color)`}>
-    <Icon src="system/check" color="var(--active--color)" />
+    <Icon src="system/line/check" color="var(--active--color)" />
   </i>
 </span>
 
@@ -29,7 +29,7 @@
             background: var(--active--color);
 
             :global(path) {
-              stroke: #fff;
+              fill: #fff;
             }
           }
         }
@@ -66,7 +66,7 @@
 
     &__path {
       fill: var(--color);
-      transition: 0.1s stroke;
+      transition: 0.1s fill;
     }
   }
 </style>
