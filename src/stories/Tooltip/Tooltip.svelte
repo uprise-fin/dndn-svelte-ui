@@ -111,7 +111,6 @@
 
       &::after {
         background: var(--outline-main);
-        // border-bottom-color: var(--outline-main);
       }
     }
   }
