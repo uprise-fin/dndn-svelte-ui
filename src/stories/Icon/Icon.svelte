@@ -5,7 +5,7 @@
 
   export let src: IconName
   export let color = 'var(--text-primary)'
-  export let size: Size = 'medium'
+  export let size: Size = 'small'
 </script>
 
 <i class={`icon icon--${size}`} style={`--color: ${color}`}>
@@ -20,13 +20,13 @@
     height: var(--size);
 
     &--small {
-      --size: 12px;
+      --size: 18px;
     }
     &--medium {
-      --size: 16px;
+      --size: 24px;
     }
     &--large {
-      --size: 24px;
+      --size: 40px;
     }
 
     :global(svg) {
@@ -35,7 +35,7 @@
     }
 
     :global(path) {
-      stroke: var(--color);
+      fill: var(--color);
     }
   }
 </style>
