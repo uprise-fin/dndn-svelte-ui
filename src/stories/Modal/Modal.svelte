@@ -62,10 +62,11 @@
     top: 0;
     right: 0;
     bottom: 0;
-    animation: fadeOut 0.5s ease-out forwards;
+    visibility: hidden;
 
     &.is-open {
-      animation-name: fadeIn;
+      visibility: visible;
+      animation: fadeIn 0.5s ease-out forwards;
     }
 
     &__backdrop {
@@ -87,10 +88,9 @@
       padding: 28px 20px;
       border-radius: 16px;
       background: #fff;
-      animation: blowDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 
       .is-open & {
-        animation-name: blowUp;
+        animation: blowUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
       }
 
       .dialog--toast & {
@@ -100,7 +100,6 @@
         margin-bottom: 0;
         border-end-end-radius: 0;
         border-end-start-radius: 0;
-        animation-name: unToast;
       }
 
       .is-open.dialog--toast & {
@@ -178,15 +177,6 @@
     }
   }
 
-  @keyframes blowDown {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0);
-    }
-  }
-
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -196,30 +186,12 @@
     }
   }
 
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-
   @keyframes toast {
     from {
       transform: translateY(100%);
     }
     to {
       transform: translateY(0);
-    }
-  }
-
-  @keyframes unToast {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(100%);
     }
   }
 </style>
