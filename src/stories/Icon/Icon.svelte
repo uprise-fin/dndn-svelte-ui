@@ -19,6 +19,10 @@
     width: var(--size);
     height: var(--size);
 
+    &--x-small {
+      --size: 12px;
+    }
+
     &--small {
       --size: 18px;
     }
