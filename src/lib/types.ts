@@ -1,1 +1,1 @@
-export const size = ['x-small', 'small', 'medium', 'large'] as const
+export const size = ['small', 'medium', 'large', 'x-large'] as const

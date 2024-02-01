@@ -5,7 +5,7 @@
 
   export let src: IconName
   export let color = 'var(--text-primary)'
-  export let size: Size = 'small'
+  export let size: Size = 'medium'
 </script>
 
 <i class={`icon icon--${size}`} style={`--color: ${color}`}>
@@ -19,17 +19,17 @@
     width: var(--size);
     height: var(--size);
 
-    &--x-small {
+    &--small {
       --size: 12px;
     }
 
-    &--small {
+    &--medium {
       --size: 18px;
     }
-    &--medium {
+    &--large {
       --size: 24px;
     }
-    &--large {
+    &--x-large {
       --size: 40px;
     }
 
