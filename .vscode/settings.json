@@ -4,6 +4,8 @@
     "source.fixAll.eslint": true,
     "source.organizeImports": true
   },
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   }
