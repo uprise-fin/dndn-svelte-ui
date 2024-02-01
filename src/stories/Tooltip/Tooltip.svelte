@@ -34,7 +34,7 @@
       </slot>
       {#if variant === 'guide' && showCloseButton}
         <button class="tooltip__close" type="button" on:click={() => (visible = false)}>
-          <Icon src="system/navi/close" size="x-small" color="var(--background);" />
+          <Icon src="system/navi/close" size="small" color="var(--background);" />
         </button>
       {/if}
     </div>
