@@ -50,7 +50,7 @@
     }
 
     &__body:not(:empty) {
-      margin: 0 0 24px;
+      margin: 8px 0 24px;
       padding: 0 var(--side-width);
     }
 
