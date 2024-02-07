@@ -37,6 +37,7 @@
       bottom: 0;
       left: 0;
       right: 0;
+      background: var(--background);
       &:before {
         content: '';
         position: absolute;

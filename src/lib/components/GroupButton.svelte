@@ -20,7 +20,6 @@
     --gap: 8px;
     display: flex;
     gap: var(--gap);
-    background: var(--background);
 
     :global(.button:not(.is-fit)) {
       flex: 1 1 0;
