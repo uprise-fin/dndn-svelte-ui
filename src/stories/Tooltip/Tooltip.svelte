@@ -84,6 +84,7 @@
     &__content {
       display: flex;
       gap: 0 6px;
+      white-space: pre-wrap;
       text-align: left;
       color: #fff;
       font-size: 12px;
