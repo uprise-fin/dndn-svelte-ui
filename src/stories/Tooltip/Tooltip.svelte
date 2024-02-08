@@ -25,7 +25,9 @@
   style={`--translateX: ${Math.min(0, offset)}px; --axisX: ${axisX}px`}
 >
   <slot>
-    <Icon src="system/line/help-circle" />
+    <button class="opener" type="button">
+      <Icon src="system/line/help-circle" />
+    </button>
   </slot>
   <div class="tooltip" bind:this={el}>
     <div class="tooltip__content">
@@ -50,6 +52,12 @@
     gap: 0 2px;
     align-items: center;
     color: inherit;
+    text-align: left;
+  }
+
+  .opener {
+    all: unset;
+    cursor: pointer;
   }
 
   .tooltip {
