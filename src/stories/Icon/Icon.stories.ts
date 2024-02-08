@@ -44,6 +44,13 @@ export const Basic: Story = {
 }
 
 export const emphasis = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
   render: () => ({
     Component: Icons,
     props: {
@@ -53,6 +60,7 @@ export const emphasis = {
 }
 
 export const fill = {
+  ...emphasis,
   render: () => ({
     Component: Icons,
     props: {
@@ -62,6 +70,7 @@ export const fill = {
 }
 
 export const line = {
+  ...emphasis,
   render: () => ({
     Component: Icons,
     props: {
