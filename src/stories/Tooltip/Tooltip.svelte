@@ -12,7 +12,7 @@
   let openerEl: HTMLElement | undefined
   let offset = 0
 
-  $: axisX = variant === 'info' ? -12 : -8
+  $: axisX = -8
   $: {
     tooltipEl && (offset = innerWidth - tooltipEl.getBoundingClientRect().right + axisX)
   }
