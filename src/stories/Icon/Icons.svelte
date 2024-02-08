@@ -32,8 +32,8 @@
 <style lang="scss">
   .list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-auto-rows: minmax(80px, auto);
     grid-gap: 5px;
     list-style: none;
     margin: 0;
@@ -49,7 +49,8 @@
       flex-flow: column;
       justify-content: center;
       align-items: center;
-      border: 1px solid var(--text-primary);
+      padding: 5px;
+      border: 1px solid var(--outline);
       cursor: pointer;
       background: var(--background);
 
