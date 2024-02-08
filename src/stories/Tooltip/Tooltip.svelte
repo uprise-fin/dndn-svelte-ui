@@ -68,6 +68,7 @@
   }
 
   .tooltip {
+    visibility: hidden;
     position: absolute;
     left: var(--axisX);
     top: 100%;
@@ -79,7 +80,6 @@
     width: max-content;
     border-radius: 6px;
     transform: translateX(var(--translateX));
-    animation: fadeOut 0.3s ease-out forwards;
 
     &__content {
       display: flex;
@@ -117,7 +117,8 @@
 
   .container--info:hover .tooltip,
   .container--guide.is-visible .tooltip {
-    animation-name: fadeIn;
+    visibility: visible;
+    animation: fadeIn 0.3s ease-out;
   }
 
   .container--guide {
@@ -137,17 +138,6 @@
     }
     100% {
       opacity: 1;
-      visibility: visible;
-    }
-  }
-
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      visibility: hidden;
     }
   }
 </style>
