@@ -5,11 +5,11 @@
   export let variant: TooltipVariant = 'info'
   export let content = ''
   export let showCloseButton = false
+  export let visible = true
 
   let innerWidth: number
   let el: HTMLElement | undefined
   let offset = 0
-  let visible = true
 
   $: axisX = variant === 'info' ? -12 : -8
   $: {
