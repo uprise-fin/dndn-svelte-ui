@@ -13,7 +13,7 @@
 
   $: axisX = variant === 'info' ? -12 : -8
   $: {
-    el && (offset = innerWidth - el.getBoundingClientRect().right)
+    el && (offset = innerWidth - el.getBoundingClientRect().right + axisX)
   }
 </script>
 
