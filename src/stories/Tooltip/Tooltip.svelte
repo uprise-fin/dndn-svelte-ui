@@ -95,7 +95,7 @@
       --size: 10px;
       content: '';
       position: absolute;
-      left: calc((var(--translateX)) * -1 + (var(--openerElSize) * 0.5));
+      left: calc((var(--translateX)) * -1 + ((var(--openerElSize) - var(--size) * 0.3) * 0.5));
       bottom: 100%;
       width: var(--size);
       height: var(--size);
