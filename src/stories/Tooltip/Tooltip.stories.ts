@@ -9,7 +9,6 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     variant: {
-      description: 'guide는 최초 노출되며 영구히 닫히는 특징이 있습니다',
       table: {
         type: {
           summary: tooltipVariant.join(' | '),
