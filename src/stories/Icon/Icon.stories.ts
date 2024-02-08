@@ -1,7 +1,9 @@
 import { size } from '$lib'
 import type { Meta, StoryObj } from '@storybook/svelte'
 import Icon from './Icon.svelte'
+import Icons from './Icons.svelte'
 import SVG from './svg'
+import type { IconName } from './type'
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const iconSource = Object.keys(SVG)
@@ -37,6 +39,33 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   args: {
-    src: 'system/forward',
+    src: 'system/line/chevron-right',
   },
+}
+
+export const emphasis = {
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('system/emphasis')) as IconName[],
+    },
+  }),
+}
+
+export const fill = {
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('system/fill')) as IconName[],
+    },
+  }),
+}
+
+export const line = {
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('system/line')) as IconName[],
+    },
+  }),
 }
