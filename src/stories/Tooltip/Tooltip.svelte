@@ -88,13 +88,14 @@
       --size: 10px;
       content: '';
       position: absolute;
+      left: calc((var(--axisX) + var(--translateX)) * -1);
       bottom: 100%;
       width: var(--size);
       height: var(--size);
-      margin: 0 0 calc(-0.5 * var(--size));
+      margin: 0 0 calc(-0.5 * var(--size)) 4px;
       background: var(--outline-primary);
       border-radius: 4px 0 0;
-      transform: rotate(45deg) skew(15deg, 15deg) translateX(calc(var(--translateX) * -1));
+      transform: rotate(45deg) skew(15deg, 15deg);
     }
 
     &__close {
