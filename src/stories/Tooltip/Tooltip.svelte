@@ -8,12 +8,13 @@
   export let visible = true
 
   let innerWidth: number
-  let el: HTMLElement | undefined
+  let tooltipEl: HTMLElement | undefined
+  let openerEl: HTMLElement | undefined
   let offset = 0
 
   $: axisX = variant === 'info' ? -12 : -8
   $: {
-    el && (offset = innerWidth - el.getBoundingClientRect().right + axisX)
+    tooltipEl && (offset = innerWidth - tooltipEl.getBoundingClientRect().right + axisX)
   }
 </script>
 
@@ -22,14 +23,18 @@
   class:container--guide={variant === 'guide'}
   class:is-visible={variant === 'guide' && visible}
   role="tooltip"
-  style={`--translateX: ${Math.min(0, offset)}px; --axisX: ${axisX}px`}
+  style={`--translateX: ${Math.min(0, offset)}px; --axisX: ${axisX}px; --openerElSize: ${
+    openerEl?.clientWidth
+  }px;`}
 >
-  <slot>
-    <button class="opener" type="button">
-      <Icon src="system/line/help-circle" />
-    </button>
-  </slot>
-  <div class="tooltip" bind:this={el}>
+  <div class="opener" bind:this={openerEl}>
+    <slot>
+      <button class="opener__button" type="button">
+        <Icon src="system/line/help-circle" />
+      </button>
+    </slot>
+  </div>
+  <div class="tooltip" bind:this={tooltipEl}>
     <div class="tooltip__content">
       <slot name="content">
         {content}
@@ -56,8 +61,10 @@
   }
 
   .opener {
-    all: unset;
-    cursor: pointer;
+    &__button {
+      all: unset;
+      cursor: pointer;
+    }
   }
 
   .tooltip {
@@ -88,7 +95,7 @@
       --size: 10px;
       content: '';
       position: absolute;
-      left: calc((var(--axisX) + var(--translateX)) * -1);
+      left: calc((var(--translateX)) * -1 + (var(--openerElSize) * 0.5));
       bottom: 100%;
       width: var(--size);
       height: var(--size);
