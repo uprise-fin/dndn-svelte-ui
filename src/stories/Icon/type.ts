@@ -1,8 +1,4 @@
 export type IconName =
-  | 'system/back'
-  | 'system/check'
-  | 'system/close'
-  | 'system/down'
   | 'system/emphasis/chevron-left'
   | 'system/emphasis/close'
   | 'system/emphasis/setting'
@@ -16,7 +12,6 @@ export type IconName =
   | 'system/fill/kakao'
   | 'system/fill/mail'
   | 'system/fill/warning-circle'
-  | 'system/forward'
   | 'system/line/add-circle'
   | 'system/line/cancel-circle'
   | 'system/line/check'
@@ -28,4 +23,3 @@ export type IconName =
   | 'system/line/help-circle'
   | 'system/line/refresh'
   | 'system/line/warning-circle'
-  | 'system/up'
