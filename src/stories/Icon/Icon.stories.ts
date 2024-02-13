@@ -46,6 +46,9 @@ export const Basic: Story = {
 export const emphasis = {
   parameters: {
     docs: {
+      description: {
+        story: '강조를 위해 굵게 제작된 타입입니다.',
+      },
       source: {
         code: null,
       },
@@ -61,6 +64,11 @@ export const emphasis = {
 
 export const fill = {
   ...emphasis,
+  parameters: {
+    docs: {
+      description: null,
+    },
+  },
   render: () => ({
     Component: Icons,
     props: {
@@ -71,6 +79,11 @@ export const fill = {
 
 export const line = {
   ...emphasis,
+  parameters: {
+    docs: {
+      description: null,
+    },
+  },
   render: () => ({
     Component: Icons,
     props: {
