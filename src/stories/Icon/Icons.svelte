@@ -54,8 +54,13 @@
       cursor: pointer;
       background: var(--background);
 
+      &:hover {
+        transition: 0.3s ease-in-out;
+        border-color: var(--text-primary);
+      }
+
       &:hover :global(.icon) {
-        transition: transform 0.3s;
+        transition: inherit;
         transform: scale(2);
       }
     }
