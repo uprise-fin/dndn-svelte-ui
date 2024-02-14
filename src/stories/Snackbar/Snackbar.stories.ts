@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/svelte'
+import type { Meta } from '@storybook/svelte'
 
+import Example from './Example.svelte'
 import Snackbar from './Snackbar.svelte'
 
 const meta = {
@@ -17,14 +18,21 @@ const meta = {
         component:
           '+layout.svelte에 Snackbar 컴포넌트를 넣고 showToast(message, duration?) 함수를 호출하여 사용합니다.',
       },
-      story: {
-        height: '100px',
-      },
     },
   },
 } satisfies Meta<Snackbar>
 
 export default meta
-type Story = StoryObj<typeof meta>
 
-export const Basic: Story = {}
+export const example = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: Example,
+  }),
+}
