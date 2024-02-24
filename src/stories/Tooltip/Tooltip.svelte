@@ -40,7 +40,11 @@
         {content}
       </slot>
       {#if variant === 'guide' && showCloseButton}
-        <button class="tooltip__close" type="button" on:click={() => (visible = false)}>
+        <button
+          class="tooltip__close"
+          type="button"
+          on:click|stopPropagation={() => (visible = false)}
+        >
           <Icon src="system/emphasis/close" size="small" color="var(--background);" />
         </button>
       {/if}
