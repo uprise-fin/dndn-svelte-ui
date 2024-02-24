@@ -114,8 +114,11 @@
       all: unset;
       opacity: 0.7;
       align-self: flex-start;
+      position: relative;
+      top: -1px;
       padding: 3px 0;
       cursor: pointer;
+      line-height: 0.1em;
     }
   }
 
