@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte'
   import { Icon } from '..'
   import type { TooltipVariant } from './type'
 
@@ -15,6 +16,13 @@
   $: axisX = -8
   $: {
     tooltipEl && (offset = innerWidth - tooltipEl.getBoundingClientRect().right + axisX)
+  }
+
+  const dispatcher = createEventDispatcher<{ close: undefined }>()
+
+  const handleClose = () => {
+    visible = false
+    dispatcher('close')
   }
 </script>
 
@@ -40,11 +48,7 @@
         {content}
       </slot>
       {#if variant === 'guide' && showCloseButton}
-        <button
-          class="tooltip__close"
-          type="button"
-          on:click|stopPropagation={() => (visible = false)}
-        >
+        <button class="tooltip__close" type="button" on:click|stopPropagation={() => handleClose()}>
           <Icon src="system/emphasis/close" size="small" color="var(--background);" />
         </button>
       {/if}
