@@ -57,7 +57,7 @@
   .dialog {
     display: flex;
     position: fixed;
-    z-index: 9999;
+    z-index: 1000;
     left: 0;
     top: 0;
     right: 0;
