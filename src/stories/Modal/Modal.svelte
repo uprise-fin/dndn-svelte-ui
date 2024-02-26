@@ -156,7 +156,6 @@
     }
 
     &__body {
-      white-space: pre-wrap;
       font-weight: 400;
       font-size: 15px;
       line-height: 1.55;
