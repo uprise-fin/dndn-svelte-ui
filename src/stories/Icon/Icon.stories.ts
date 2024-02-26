@@ -63,10 +63,11 @@ export const emphasis = {
 }
 
 export const fill = {
-  ...emphasis,
   parameters: {
     docs: {
-      description: null,
+      source: {
+        code: null,
+      },
     },
   },
   render: () => ({
@@ -78,10 +79,11 @@ export const fill = {
 }
 
 export const line = {
-  ...emphasis,
   parameters: {
     docs: {
-      description: null,
+      source: {
+        code: null,
+      },
     },
   },
   render: () => ({
