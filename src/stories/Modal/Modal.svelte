@@ -16,6 +16,8 @@
 
   const dispatch = createEventDispatcher<{ close: undefined }>()
 
+  const availableCloseButton = !keepDialog && showCloseButton
+
   const closeModal = () => {
     open = false
     dispatch('close')
@@ -30,12 +32,14 @@
   <span class="dialog__backdrop" aria-hidden="true" on:click={handleClick} />
 
   <article class="dialog__container">
-    <header class="dialog__header">
-      <h1 class="dialog__title">{@html title}</h1>
-      {#if !keepDialog && showCloseButton}
-        <button class="dialog__close" on:click={handleClick}>닫기</button>
-      {/if}
-    </header>
+    {#if title || availableCloseButton}
+      <header class="dialog__header">
+        <h1 class="dialog__title">{@html title}</h1>
+        {#if availableCloseButton}
+          <button class="dialog__close" on:click={handleClick}>닫기</button>
+        {/if}
+      </header>
+    {/if}
 
     <div class="dialog__body">
       <slot>
