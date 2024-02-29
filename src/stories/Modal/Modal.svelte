@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
   import { Button } from '..'
-  import { GroupButton } from '../../lib/components'
+  import { GroupButton, type Layout } from '../../lib'
   import type { Footer } from './type'
 
   export let open = false
@@ -11,7 +11,7 @@
   export let content = ''
   export let keepDialog = false
   export let isVerticalLayout = false
-  export let layout: DNDNUI.Layout = 'padded'
+  export let layout: Layout = 'padded'
   export let showCloseButton = layout !== 'fullscreen'
   export let footers: Partial<Footer>[] | undefined = layout === 'fullscreen' ? [] : undefined
 

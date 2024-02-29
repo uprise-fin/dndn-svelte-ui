@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Size } from '../../type'
+  import type { Size } from '../../lib'
   import SVG from './svg'
   import type { IconName } from './type'
 

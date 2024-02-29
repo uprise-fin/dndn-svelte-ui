@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Size } from '../../type'
+  import type { Size } from '../../lib'
 
   export let size: Omit<Size, 'x-large'> = 'large'
   export let label = ''
