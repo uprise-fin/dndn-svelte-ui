@@ -10,9 +10,10 @@
   export let title = ''
   export let content = ''
   export let keepDialog = false
-  export let showCloseButton = true
-  export let footers: Partial<Footer>[] | undefined = undefined
   export let isVerticalLayout = false
+  export let layout: DNDNUI.Layout = 'padded'
+  export let showCloseButton = layout !== 'fullscreen'
+  export let footers: Partial<Footer>[] | undefined = layout === 'fullscreen' ? [] : undefined
 
   const dispatch = createEventDispatcher<{ close: undefined }>()
 
@@ -28,7 +29,14 @@
   }
 </script>
 
-<div class="dialog" class:is-open={open} class:dialog--toast={toast} style={`--width: ${width};`}>
+<div
+  class="dialog"
+  class:is-centered={layout === 'centered'}
+  class:is-fullscreen={layout === 'fullscreen'}
+  class:is-open={open}
+  class:dialog--toast={toast}
+  style={`--width: ${width};`}
+>
   <span class="dialog__backdrop" aria-hidden="true" on:click={handleClick} />
 
   <article class="dialog__container">
@@ -89,9 +97,16 @@
       width: min(calc((100% - 6px) - 2em), var(--width));
       max-height: calc((100% - 6px) - 2em);
       margin: auto;
-      padding: 28px 20px;
       border-radius: 16px;
       background: #fff;
+
+      :not(.is-fullscreen) & {
+        padding: 28px 20px;
+      }
+
+      .is-centered & {
+        text-align: center;
+      }
 
       .is-open & {
         animation: blowUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;

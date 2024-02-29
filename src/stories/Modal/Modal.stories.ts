@@ -1,5 +1,5 @@
+import { layout } from '$lib'
 import type { Meta, StoryObj } from '@storybook/svelte'
-
 import Modal from './Modal.svelte'
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
@@ -29,6 +29,23 @@ const meta = {
     isVerticalLayout: {
       description: '하단 버튼 영역의 레이아웃을 결정합니다. 기본은 가로 배열(수평)입니다.',
     },
+    layout: {
+      table: {
+        type: {
+          summary: layout.join(' | '),
+        },
+      },
+      control: 'select',
+      options: layout,
+    },
+    showCloseButton: {
+      table: {
+        type: {
+          summary: 'boolean',
+        },
+        defaultValue: { summary: 'true' },
+      },
+    },
   },
   parameters: {
     docs: {
@@ -48,7 +65,7 @@ export const Basic: Story = {
     open: true,
     title: '휴대폰 번호 변경 실패',
     content:
-      '<span style="color: var(--color-danger);">본인 명의의 휴대폰 번호</span>로만\n변경할 수 있어요.',
+      '<span style="color: var(--color-danger);">본인 명의의 휴대폰 번호</span>로만<br />변경할 수 있어요.',
     footers: [
       {
         label: '취소',
