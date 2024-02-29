@@ -1,5 +1,6 @@
 import { layout } from '$lib'
 import type { Meta, StoryObj } from '@storybook/svelte'
+import FullscreenModal from './FullscreenModal.svelte'
 import Modal from './Modal.svelte'
 
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
@@ -39,6 +40,7 @@ const meta = {
       options: layout,
     },
     showCloseButton: {
+      description: 'layout이 fullscreen인 경우에는 기본 값이 false입니다.',
       table: {
         type: {
           summary: 'boolean',
@@ -78,4 +80,20 @@ export const Basic: Story = {
       },
     ],
   },
+}
+
+export const fullscreen = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: FullscreenModal,
+    props: {
+      title: '설렘가득 2월에는 골드바와 상품권을 드려요!',
+    },
+  }),
 }
