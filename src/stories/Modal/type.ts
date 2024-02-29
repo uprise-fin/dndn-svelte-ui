@@ -1,3 +1,4 @@
+import type { Layout } from '../../lib'
 import type { ButtonOptions } from '../Button/type'
 
 export type Footer = {
@@ -14,5 +15,6 @@ export type ModalOptions = {
   keepDialog: boolean
   showCloseButton: boolean
   isVerticalLayout: boolean
+  layout: Layout
   footers: Partial<Footer>[]
 }
