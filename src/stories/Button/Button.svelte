@@ -13,7 +13,6 @@
   const el = href ? 'a' : 'button'
 </script>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
 <svelte:element
   this={el}
   {...$$restProps}
@@ -25,6 +24,7 @@
   class:is-loading={loading}
   class:is-fit={isFit}
   on:click
+  role="presentation"
 >
   <slot>{label}</slot>
 </svelte:element>
