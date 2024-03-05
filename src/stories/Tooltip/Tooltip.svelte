@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte'
+  import { createEventDispatcher, onMount } from 'svelte'
   import { Icon } from '..'
   import type { TooltipVariant } from './type'
 
@@ -13,10 +13,7 @@
   let openerEl: HTMLElement | undefined
   let offset = 0
 
-  $: axisX = -8
-  $: {
-    tooltipEl && (offset = innerWidth - tooltipEl.getBoundingClientRect().right + axisX)
-  }
+  const axisX = -8
 
   const dispatcher = createEventDispatcher<{ close: undefined }>()
 
@@ -24,6 +21,10 @@
     visible = false
     dispatcher('close')
   }
+
+  onMount(() => {
+    tooltipEl && (offset = innerWidth - tooltipEl.getBoundingClientRect().right + axisX)
+  })
 </script>
 
 <div
