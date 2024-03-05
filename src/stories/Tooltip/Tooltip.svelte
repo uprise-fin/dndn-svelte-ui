@@ -23,7 +23,10 @@
   }
 
   onMount(() => {
-    tooltipEl && (offset = innerWidth - tooltipEl.getBoundingClientRect().right + axisX)
+    const timeout = setTimeout(() => {
+      tooltipEl && (offset = innerWidth - tooltipEl.getBoundingClientRect().right + axisX)
+    }, 0)
+    return () => clearTimeout(timeout)
   })
 </script>
 
