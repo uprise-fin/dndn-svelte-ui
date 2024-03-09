@@ -1,8 +1,11 @@
 :root {
   --main-100: #fff;
   --main-97: #f7f6fe;
-  --main-93: #eaeaff;
+  --main-96: #f4f3fe;
+  --main-93: #ebe9fd;
+  --main-92: #e8e6fd;
   --main-89: #dfddfd;
+  --main-88: #dcdafc;
   --main-51: #7066f4;
 
   --neutral-100: #fff;
@@ -10,7 +13,7 @@
   --neutral-96: #f4f4f5;
   --neutral-95: #f0f0f2;
   --neutral-94: #efeff0;
-  --neutral-93: #ebe9fd;
+  --neutral-93: #ececee;
   --neutral-92: #e8e8eb;
   --neutral-89: #dedee2;
   --neutral-88: #dcdce0;
@@ -22,8 +25,72 @@
   --neutral-23: #353542;
   --neutral-13: #20202d;
 
+  --danger-100: #fff;
+  --danger-96: #fff0f2;
   --danger-55: #ff2541;
 
+  --success-100: #fff;
+  --success-96: #e7f7f1;
+  --success-62: #0caa6e;
+
+  // Neutral
+  --neutral-surface: var(--neutral-100);
+  --neutral-surface--high: var(--neutral-97);
+
+  --neutral-layer--low: var(--neutral-100);
+  --neutral-layer: var(--neutral-97);
+  --neutral-layer--high: var(--neutral-93);
+  --neutral-layer--higher: var(--neutral-89);
+
+  --neutral-container--low: var(--neutral-100);
+  --neutral-container: var(--neutral-96);
+  --neutral-container--high: var(--neutral-92);
+  --neutral-container--higher: var(--neutral-88);
+  --neutral-container--highest: var(--neutral-84);
+
+  --on-neutral-primary: var(--neutral-13);
+  --on-neutral-secondary: var(--neutral-23);
+  --on-neutral-tertiary: var(--neutral-38);
+  --on-neutral-quaternary: var(--neutral-48);
+  --on-neutral-caption: var(--neutral-61);
+  --on-neutral-micro: var(--neutral-72);
+
+  --inverse-neutral-container: var(--neutral-13);
+
+  --inverse-on-neutral: var(--neutral-100);
+
+  // Main
+  --main-surface: var(--main-100);
+  --main-surface--high: var(--main-97);
+
+  --main-layer--low: var(--main-100);
+  --main-layer: var(--main-97);
+  --main-layer--high: var(--main-93);
+
+  --main-container--low: var(--main-100);
+  --main-container: var(--main-96);
+  --main-container--high: var(--main-92);
+  --main-container--higher: var(--main-88);
+
+  --on-main: var(--main-51);
+
+  --inverse-main-container: var(--main-51);
+
+  --inverse-on-main: var(--main-100);
+
+  // Danger
+  --danger-container: var(--danger-96);
+  --on-danger: var(--danger-55);
+  --inverse-danger-container: var(--danger-55);
+  --inverse-on-danger: var(--danger-100);
+
+  // Success
+  --success-container: var(--success-96);
+  --on-success: var(--success-62);
+  --inverse-success-container: var(--success-62);
+  --inverse-on-success: var(--success-100);
+
+  // old tokens
   --color-main: var(--main-51);
   --color-danger: var(--danger-55);
 
