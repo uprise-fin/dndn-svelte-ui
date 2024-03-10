@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte'
   import type { ButtonVariant, HTMLAttributeAnchorTarget } from './type'
 
   export let variant: ButtonVariant = 'primary'
@@ -11,6 +12,12 @@
   export let rel: string | undefined = target === '_blank' ? 'noreferrer noopener' : undefined
 
   const el = href ? 'a' : 'button'
+
+  const dispatcher = createEventDispatcher<{ click: Event }>()
+
+  const handleClick = (e: Event) => {
+    !loading && dispatcher('click', e)
+  }
 </script>
 
 <svelte:element
@@ -19,11 +26,11 @@
   {href}
   {target}
   {rel}
-  disabled={disabled || loading}
+  {disabled}
   class={['button', `button--${variant}`].join(' ')}
   class:is-loading={loading}
   class:is-fit={isFit}
-  on:click
+  on:click={handleClick}
   role="presentation"
 >
   <slot>{label}</slot>
@@ -52,7 +59,7 @@
       cursor: pointer;
     }
 
-    &:disabled:not(.is-loading) {
+    &:disabled {
       background: var(--button--higher);
       color: #fff;
       cursor: not-allowed;
