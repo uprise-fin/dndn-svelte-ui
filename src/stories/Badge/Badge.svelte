@@ -1,11 +1,12 @@
 <script lang="ts">
-  import type { Size } from '../../lib'
+  import type { Size, Variant } from '../../lib'
 
   export let size: Omit<Size, 'x-large'> = 'large'
+  export let variant: Variant = 'primary'
   export let label = ''
 </script>
 
-<div class={`badge badge--${size}`}>
+<div class={`badge badge--${size} badge--${variant}`}>
   <span class="badge__inner">
     <slot>{label}</slot>
   </span>
@@ -18,21 +19,26 @@
     position: relative;
     overflow: hidden;
     border-radius: 30px;
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background: var(--color-danger);
-      opacity: 0.1;
-    }
+
     &__inner {
       position: relative;
       padding: 0 6px;
       font-weight: 600;
-      color: var(--color-danger);
+    }
+
+    &--primary {
+      background: var(--danger-container);
+      color: var(--on-danger);
+    }
+
+    &--secondary {
+      background: var(--main-container);
+      color: var(--on-main);
+    }
+
+    &--tertiary {
+      background: var(--neutral-container);
+      color: var(--on-neutral-tertiary);
     }
 
     &--small {
