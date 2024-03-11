@@ -12,12 +12,13 @@
   export let keepDialog = false
   export let isVerticalLayout = false
   export let layout: Layout = 'padded'
-  export let showCloseButton = layout !== 'fullscreen'
+  export let showCloseButton = true
   export let footers: Partial<Footer>[] | undefined = layout === 'fullscreen' ? [] : undefined
 
   const dispatch = createEventDispatcher<{ close: undefined }>()
 
-  const availableCloseButton = !keepDialog && showCloseButton
+  $: _showCloseButton = layout !== 'fullscreen' && showCloseButton
+  $: availableCloseButton = !keepDialog && _showCloseButton
 
   const closeModal = () => {
     open = false
