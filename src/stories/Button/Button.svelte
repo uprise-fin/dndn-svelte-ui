@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte'
   import type { ButtonVariant, HTMLAttributeAnchorTarget } from './type'
 
   export let variant: ButtonVariant = 'primary'
@@ -11,6 +12,12 @@
   export let rel: string | undefined = target === '_blank' ? 'noreferrer noopener' : undefined
 
   const el = href ? 'a' : 'button'
+
+  const dispatcher = createEventDispatcher<{ click: Event }>()
+
+  const handleClick = (e: Event) => {
+    !loading && dispatcher('click', e)
+  }
 </script>
 
 <svelte:element
@@ -19,11 +26,11 @@
   {href}
   {target}
   {rel}
-  disabled={disabled || loading}
+  {disabled}
   class={['button', `button--${variant}`].join(' ')}
   class:is-loading={loading}
   class:is-fit={isFit}
-  on:click
+  on:click={handleClick}
   role="presentation"
 >
   <slot>{label}</slot>
@@ -52,9 +59,9 @@
       cursor: pointer;
     }
 
-    &:disabled:not(.is-loading) {
-      background: var(--button--higher);
-      color: #fff;
+    &:disabled {
+      background: var(--neutral-container--higher);
+      color: var(--inverse-on-neutral);
       cursor: not-allowed;
     }
 
@@ -63,41 +70,41 @@
     }
 
     &--primary {
-      background: var(--color-main);
-      color: #fff;
+      background: var(--inverse-main-container);
+      color: var(--inverse-on-neutral);
     }
 
     &--secondary {
-      background: var(--background-blurple);
-      color: var(--color-main);
+      background: var(--main-container);
+      color: var(--on-main);
     }
 
     &--tertiary {
-      background: var(--container-neutral--high);
-      color: var(--text-quaternary);
+      background: var(--neutral-container);
+      color: var(--on-neutral-quaternary);
     }
 
     &--warning {
-      background: var(--color-danger);
-      color: #fff;
+      background: var(--inverse-danger-container);
+      color: var(--inverse-on-neutral);
     }
 
     &--outline {
-      border: 1px solid var(--outline--high);
-      color: var(--text-primary);
+      border: 1px solid var(--neutral-container--high);
+      color: var(--on-neutral-quaternary);
 
       &:disabled {
         background: transparent;
-        color: var(--button--higher);
+        color: var(--on-neutral-micro);
       }
     }
 
     &--text {
-      color: var(--text-tertiary);
+      color: var(--on-neutral-quaternary);
 
       &:disabled {
         background: transparent;
-        color: var(--button--higher);
+        color: var(--on-neutral-micro);
       }
     }
   }
