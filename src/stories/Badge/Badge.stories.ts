@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
 
-import { size as realSize } from '$lib'
+import { size as realSize, variant } from '$lib'
 import Badge from './Badge.svelte'
 
 const size = realSize.filter((s) => s !== 'x-large')
@@ -15,6 +15,13 @@ const meta = {
       },
       options: size,
       control: { type: 'select' },
+    },
+    variant: {
+      table: {
+        type: { summary: variant.join(' | ') },
+      },
+      control: 'select',
+      options: variant,
     },
   },
 } satisfies Meta<Badge>
