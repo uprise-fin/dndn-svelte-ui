@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Size, Variant } from '../../lib'
 
-  export let size: Omit<Size, 'x-large'> = 'medium'
+  export let size: Exclude<Size, 'x-large'> = 'medium'
   export let variant: Variant = 'primary'
   export let label = ''
 </script>
