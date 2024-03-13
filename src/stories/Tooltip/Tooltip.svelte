@@ -53,7 +53,7 @@
       </slot>
       {#if variant === 'guide' && showCloseButton}
         <button class="tooltip__close" type="button" on:click|stopPropagation={() => handleClose()}>
-          <Icon src="system/emphasis/close" size="small" color="var(--background);" />
+          <Icon src="system/emphasis/close" size="small" color="var(--main-surface);" />
         </button>
       {/if}
     </div>
@@ -87,7 +87,7 @@
     z-index: 200;
     margin: 10px 0 0;
     padding: 12px 16px;
-    background: var(--outline-primary);
+    background: var(--inverse-neutral-container);
     max-width: 300px;
     width: max-content;
     border-radius: 6px;
@@ -113,7 +113,7 @@
       width: var(--size);
       height: var(--size);
       margin: 0 0 calc(-0.5 * var(--size)) 4px;
-      background: var(--outline-primary);
+      background: var(--inverse-neutral-container);
       border-radius: 4px 0 0;
       transform: rotate(45deg) skew(15deg, 15deg);
     }
@@ -139,10 +139,10 @@
   .container--guide {
     .tooltip {
       padding: 8px 12px;
-      background: var(--outline-main);
+      background: var(--inverse-main-container);
 
       &::after {
-        background: var(--outline-main);
+        background: var(--inverse-main-container);
       }
     }
   }

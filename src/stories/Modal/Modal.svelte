@@ -137,7 +137,7 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 1.3;
-      color: var(--text-primary);
+      color: var(--on-neutral-primary);
     }
 
     &__close {
@@ -162,7 +162,7 @@
         width: 2px;
         height: 16px;
         margin: auto;
-        background: var(--text-primary);
+        background: var(--on-neutral-primary);
         border-radius: 4px;
       }
 
@@ -179,7 +179,7 @@
       font-weight: 400;
       font-size: 15px;
       line-height: 1.55;
-      color: var(--text-tertiary);
+      color: var(--on-neutral-tertiary);
     }
 
     :global(.group-button:not(:empty)) {

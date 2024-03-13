@@ -71,7 +71,7 @@
 
 <style lang="scss">
   .input-wrap {
-    --color: var(--text-secondary);
+    --color: var(--on-neutral-secondary);
 
     &__label {
       display: block;
@@ -82,7 +82,7 @@
       color: var(--color);
 
       &--error {
-        --color: var(--color-danger);
+        --color: var(--on-danger);
       }
     }
   }
@@ -94,13 +94,13 @@
     padding-inline: var(--padding);
     outline: 1px solid transparent;
     border-radius: 8px;
-    background: var(--background-neutral);
+    background: var(--neutral-layer);
     transition: outline 0.1s;
 
     &:focus-within:not(.input--disabled) {
-      outline: 1px solid var(--text-primary);
-      background: var(--background);
-      color: var(--text-primary);
+      outline: 1px solid var(--on-neutral-primary);
+      background: var(--main-surface);
+      color: var(--on-neutral-primary);
     }
 
     &--disabled {
@@ -108,7 +108,7 @@
     }
 
     &--error {
-      outline: 1px solid var(--color-danger) !important;
+      outline: 1px solid var(--on-danger) !important;
     }
 
     &__prefix {
@@ -127,14 +127,14 @@
       outline: 0;
       font-size: 16px;
       line-height: 1.2;
-      color: var(--text-secondary);
-      caret-color: var(--text-secondary);
+      color: var(--on-neutral-secondary);
+      caret-color: var(--on-neutral-secondary);
       &:read-only {
-        -webkit-text-fill-color: var(--text-secondary);
+        -webkit-text-fill-color: var(--on-neutral-secondary);
       }
       &::placeholder,
       &:disabled {
-        -webkit-text-fill-color: var(--text-micro);
+        -webkit-text-fill-color: var(--on-neutral-micro);
       }
     }
 
@@ -161,7 +161,7 @@
       width: var(--size);
       height: var(--size);
       border-radius: 100%;
-      background: var(--button--higher);
+      background: var(--neutral-container--higher);
       text-indent: -9999px;
       font-size: 0.1em;
 
@@ -186,7 +186,7 @@
     &__suffix {
       display: grid;
       place-items: center;
-      color: var(--text-caption);
+      color: var(--on-neutral-caption);
 
       &:not(:empty) {
         margin: 0 0 0 10px;
@@ -202,14 +202,14 @@
   }
 
   .messages {
-    --color: var(--text-caption);
+    --color: var(--on-neutral-caption);
     margin: 12px 0 0;
     color: var(--color);
     font-size: 13px;
     line-height: 1.6;
 
     &--error {
-      --color: var(--color-danger);
+      --color: var(--on-danger);
     }
 
     &__item {

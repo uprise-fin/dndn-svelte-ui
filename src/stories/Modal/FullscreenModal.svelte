@@ -40,7 +40,7 @@
 
     &__item--clear {
       :global(.button) {
-        color: var(--text-micro);
+        color: var(--on-neutral-micro);
       }
     }
 

@@ -26,8 +26,8 @@
     &__content {
       display: inline-flex;
       padding: 5px 15px;
-      background: var(--text-primary);
-      color: var(--background);
+      background: var(--on-neutral-primary);
+      color: var(--main-surface);
       border-radius: 60px;
       font-size: 15px;
     }

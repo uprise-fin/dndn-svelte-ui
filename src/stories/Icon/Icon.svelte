@@ -4,7 +4,7 @@
   import type { IconName } from './type'
 
   export let src: IconName
-  export let color = 'var(--text-primary)'
+  export let color = 'var(--on-neutral-primary)'
   export let size: Size = 'medium'
 </script>
 

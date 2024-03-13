@@ -37,7 +37,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: var(--background);
+      background: var(--main-surface);
       &:before {
         content: '';
         position: absolute;
