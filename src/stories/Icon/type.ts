@@ -1,7 +1,9 @@
 export type IconName =
+  | 'system/emphasis/check'
   | 'system/emphasis/chevron-left'
   | 'system/emphasis/close'
   | 'system/emphasis/setting'
+  | 'system/emphasis/share'
   | 'system/fill/add-circle'
   | 'system/fill/apple'
   | 'system/fill/backspace'
@@ -13,6 +15,7 @@ export type IconName =
   | 'system/fill/mail'
   | 'system/fill/warning-circle'
   | 'system/line/add-circle'
+  | 'system/line/arrow-forward'
   | 'system/line/cancel-circle'
   | 'system/line/check'
   | 'system/line/chevron-down'
