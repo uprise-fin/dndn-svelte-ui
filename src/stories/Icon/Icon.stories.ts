@@ -8,7 +8,7 @@ import type { IconName } from './type'
 // More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const iconSource = Object.keys(SVG)
 const meta = {
-  title: 'Icon',
+  title: 'Foundation/Icons',
   component: Icon,
   tags: ['autodocs'],
   argTypes: {
