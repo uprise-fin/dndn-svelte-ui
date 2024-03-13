@@ -50,13 +50,13 @@
       justify-content: center;
       align-items: center;
       padding: 5px;
-      border: 1px solid var(--outline);
+      border: 1px solid var(--neutral-container);
       cursor: pointer;
-      background: var(--background);
+      background: var(--main-surface);
 
       &:hover {
         transition: 0.3s ease-in-out;
-        border-color: var(--text-primary);
+        border-color: var(--on-neutral-primary);
       }
 
       &:hover :global(.icon) {

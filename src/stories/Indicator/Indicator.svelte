@@ -40,16 +40,16 @@
     &__item {
       width: var(--size);
       height: var(--size);
-      background: var(--container-neutral--high);
+      background: var(--neutral-layer--high);
       border-radius: 100%;
 
       &--active {
-        background: var(--color-main);
+        background: var(--on-main);
       }
     }
 
     &__label {
-      color: var(--color-main);
+      color: var(--on-main);
       font-weight: 700;
       font-size: 14px;
       line-height: 1.5;

@@ -49,13 +49,13 @@
 
       &:checked {
         + .checkbox__img {
-          --active--color: var(--color-main);
+          --active--color: var(--on-main);
         }
       }
     }
 
     &__img {
-      --active--color: var(--button--higher);
+      --active--color: var(--neutral-container--higher);
       box-sizing: border-box;
       display: inline-grid;
       place-items: center;
