@@ -77,6 +77,10 @@
     bottom: 0;
     visibility: hidden;
 
+    &--toast {
+      margin-top: env(safe-area-inset-top);
+    }
+
     &.is-open {
       visibility: visible;
       animation: fadeIn 0.5s ease-out forwards;
@@ -115,7 +119,6 @@
 
       .dialog--toast & {
         align-self: flex-end;
-        max-height: 100%;
         width: min(100%, var(--width));
         margin-bottom: 0;
         border-end-end-radius: 0;
