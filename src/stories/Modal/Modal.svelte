@@ -102,11 +102,12 @@
       width: min(calc((100% - 6px) - 2em), var(--width));
       max-height: calc((100% - 6px) - 2em);
       margin: auto;
+      padding-bottom: env(safe-area-inset-bottom);
       border-radius: 16px;
       background: #fff;
 
       :not(.is-fullscreen) & {
-        padding: 28px 20px;
+        padding: 28px 20px calc(env(safe-area-inset-bottom) + 28px);
       }
 
       .is-centered & {
