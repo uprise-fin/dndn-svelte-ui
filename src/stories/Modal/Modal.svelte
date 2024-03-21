@@ -68,6 +68,8 @@
 
 <style lang="scss">
   .dialog {
+    --padding-block: var(--padding-block);
+
     display: flex;
     position: fixed;
     z-index: 1000;
@@ -102,12 +104,11 @@
       width: min(calc((100% - 6px) - 2em), var(--width));
       max-height: calc((100% - 6px) - 2em);
       margin: auto;
-      padding-bottom: env(safe-area-inset-bottom);
       border-radius: 16px;
       background: #fff;
 
       :not(.is-fullscreen) & {
-        padding: 28px 20px calc(env(safe-area-inset-bottom) + 28px);
+        padding: var(--padding-block) 20px;
       }
 
       .is-centered & {
@@ -122,8 +123,13 @@
         align-self: flex-end;
         width: min(100%, var(--width));
         margin-bottom: 0;
+        padding-bottom: env(safe-area-inset-bottom);
         border-end-end-radius: 0;
         border-end-start-radius: 0;
+      }
+
+      .dialog--toast:not(.is-fullscreen) & {
+        padding-bottom: calc(var(--padding-block) + env(safe-area-inset-bottom));
       }
 
       .is-open.dialog--toast & {
