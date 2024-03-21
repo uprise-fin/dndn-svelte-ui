@@ -68,7 +68,7 @@
 
 <style lang="scss">
   .dialog {
-    --padding-block: var(--padding-block);
+    --padding-block: 28px;
 
     display: flex;
     position: fixed;
