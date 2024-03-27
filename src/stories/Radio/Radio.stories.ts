@@ -34,27 +34,27 @@ export const basic: Story = {
   args: {
     options: [
       {
-        value: 6,
+        value: '6',
         label: '6등급',
       },
       {
-        value: 5,
+        value: '5',
         label: '5등급',
       },
       {
-        value: 4,
+        value: '4',
         label: '4등급',
       },
       {
-        value: 3,
+        value: '3',
         label: '3등급',
       },
       {
-        value: 2,
+        value: '2',
         label: '2등급',
       },
       {
-        value: 1,
+        value: '1',
         label: '1등급',
       },
     ],
