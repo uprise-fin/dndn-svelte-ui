@@ -1,6 +1,8 @@
 export type IconName =
   | 'system/emphasis/check'
+  | 'system/emphasis/chevron-down'
   | 'system/emphasis/chevron-left'
+  | 'system/emphasis/chevron-up'
   | 'system/emphasis/close'
   | 'system/emphasis/setting'
   | 'system/emphasis/share'
