@@ -36,9 +36,13 @@
 
 <style lang="scss">
   .radio-group {
-    display: flex;
-    justify-content: var(--align);
-    gap: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    grid-gap: 10px;
+
+    &--vertical {
+      grid-template-columns: repeat(auto-fit, minmax(0, auto));
+    }
   }
 
   .radio {
@@ -73,6 +77,7 @@
     }
 
     &__img {
+      flex: 0 0 auto;
       display: grid;
       place-items: center;
       box-sizing: border-box;
