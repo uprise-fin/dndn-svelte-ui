@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte'
   import type { Align, RadioOption } from '../../lib'
 
   export let align: Align = 'initial'
@@ -6,12 +7,27 @@
   export let options: RadioOption[]
   export let checked = options[0].value
   export let size: 'medium' = 'medium'
+
+  const dispatcher = createEventDispatcher<{ change: { event: Event; context: RadioOption } }>()
+
+  const handleChange = (value: string | number) => (event: Event) => {
+    const context = options.find((o) => o.value === value)
+    if (!context) return
+    dispatcher('change', { event, context })
+  }
 </script>
 
 <div class="radio-group" class:radio-group--vertical={isVerticalLayout} style={`--align: ${align}`}>
   {#each options as option}
     <label class={`radio radio--${size}`}>
-      <input class="radio__el" type="radio" {...option} bind:group={checked} value={option.value} />
+      <input
+        class="radio__el"
+        type="radio"
+        {...option}
+        bind:group={checked}
+        value={option.value}
+        on:change={handleChange(option.value)}
+      />
       <i class="radio__img" />
       {option.label}
     </label>
