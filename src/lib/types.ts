@@ -6,3 +6,5 @@ export type Size = typeof size[number]
 
 export const variant = ['primary', 'secondary', 'tertiary'] as const
 export type Variant = typeof variant[number]
+
+export type RadioOption = { value: string | number; label: string; [key: string]: unknown }
