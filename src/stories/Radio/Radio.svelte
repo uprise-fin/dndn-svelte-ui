@@ -2,12 +2,13 @@
   import type { Align, RadioOption } from '../../lib'
 
   export let align: Align = 'initial'
+  export let isVerticalLayout = false
   export let options: RadioOption[]
   export let checked = options[0].value
   export let size: 'medium' = 'medium'
 </script>
 
-<div class="radio-group" style={`--align: ${align}`}>
+<div class="radio-group" class:radio-group--vertical={isVerticalLayout} style={`--align: ${align}`}>
   {#each options as option}
     <label class={`radio radio--${size}`}>
       <input class="radio__el" type="radio" {...option} bind:group={checked} value={option.value} />
@@ -31,6 +32,10 @@
     position: relative;
     font-size: 15px;
     cursor: pointer;
+
+    .radio-group--vertical & {
+      flex-flow: column wrap;
+    }
 
     &--medium {
       --size: 24px;
