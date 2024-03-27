@@ -17,7 +17,7 @@
   }
 </script>
 
-<div class="radio-group" class:radio-group--vertical={isVerticalLayout} class:is-block={isBlock}>
+<div class="radio-group" class:is-vertical={isVerticalLayout} class:is-block={isBlock}>
   {#each options as option}
     <label class={`radio radio--${size}`}>
       <input
@@ -40,7 +40,7 @@
     grid-template-columns: repeat(auto-fit, minmax(100px, auto));
     gap: 10px;
 
-    &--vertical {
+    &.is-vertical {
       grid-template-columns: repeat(auto-fit, minmax(0, auto));
     }
 
@@ -58,7 +58,7 @@
     font-size: 15px;
     cursor: pointer;
 
-    .radio-group--vertical & {
+    .is-vertical & {
       flex-flow: column wrap;
     }
 
