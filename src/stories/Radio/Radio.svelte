@@ -1,8 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
-  import type { Align, RadioOption } from '../../lib'
+  import type { RadioOption } from '../../lib'
 
-  export let align: Align = 'initial'
   export let isVerticalLayout = false
   export let options: RadioOption[]
   export let checked = options[0].value
@@ -17,7 +16,7 @@
   }
 </script>
 
-<div class="radio-group" class:radio-group--vertical={isVerticalLayout} style={`--align: ${align}`}>
+<div class="radio-group" class:radio-group--vertical={isVerticalLayout}>
   {#each options as option}
     <label class={`radio radio--${size}`}>
       <input
