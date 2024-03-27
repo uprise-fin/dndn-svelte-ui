@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
 
+import { align } from '$lib'
 import Radio from './Radio.svelte'
 
 const meta = {
@@ -7,6 +8,13 @@ const meta = {
   component: Radio,
   tags: ['autodocs'],
   argTypes: {
+    align: {
+      table: {
+        type: { summary: align.join(' | ') },
+      },
+      control: 'select',
+      options: align,
+    },
     options: {
       table: {
         type: { summary: 'array' },

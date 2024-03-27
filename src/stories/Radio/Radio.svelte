@@ -1,12 +1,13 @@
 <script lang="ts">
-  import type { RadioOption } from '../../lib'
+  import type { Align, RadioOption } from '../../lib'
 
+  export let align: Align = 'initial'
   export let options: RadioOption[]
   export let checked = options[0].value
   export let size: 'medium' = 'medium'
 </script>
 
-<div class="radio-group">
+<div class="radio-group" style={`--align: ${align}`}>
   {#each options as option}
     <label class={`radio radio--${size}`}>
       <input class="radio__el" type="radio" {...option} bind:group={checked} value={option.value} />
@@ -19,6 +20,7 @@
 <style lang="scss">
   .radio-group {
     display: flex;
+    justify-content: var(--align);
     gap: 10px 20px;
   }
 
