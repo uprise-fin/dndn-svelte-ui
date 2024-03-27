@@ -3,6 +3,7 @@
   import type { RadioOption } from '../../lib'
 
   export let isVerticalLayout = false
+  export let isBlock = false
   export let options: RadioOption[]
   export let checked = options[0].value
   export let size: 'medium' = 'medium'
@@ -16,7 +17,7 @@
   }
 </script>
 
-<div class="radio-group" class:radio-group--vertical={isVerticalLayout}>
+<div class="radio-group" class:radio-group--vertical={isVerticalLayout} class:is-block={isBlock}>
   {#each options as option}
     <label class={`radio radio--${size}`}>
       <input
@@ -37,10 +38,15 @@
   .radio-group {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, auto));
-    grid-gap: 10px;
+    gap: 10px;
 
     &--vertical {
       grid-template-columns: repeat(auto-fit, minmax(0, auto));
+    }
+
+    &.is-block {
+      grid-template-columns: 1fr;
+      gap: 28px;
     }
   }
 
