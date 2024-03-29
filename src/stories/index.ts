@@ -1,3 +1,4 @@
+export * from '../lib'
 export { default as Badge } from './Badge/Badge.svelte'
 export { default as Button } from './Button/Button.svelte'
 export { default as Checkbox } from './Checkbox/Checkbox.svelte'
