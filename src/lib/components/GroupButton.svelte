@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { Button, type Footer } from '../../stories'
+  import type { Footer } from '../../lib'
+  import { Button } from '../../stories'
 
   export let isVerticalLayout = false
   export let footers: Partial<Footer>[] | undefined = undefined

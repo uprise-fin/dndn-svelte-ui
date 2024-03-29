@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
-  import type { ButtonVariant, HTMLAttributeAnchorTarget } from './type'
+  import type { ButtonVariant, HTMLAttributeAnchorTarget } from '../../lib'
 
   export let variant: ButtonVariant = 'primary'
   export let label = ''
