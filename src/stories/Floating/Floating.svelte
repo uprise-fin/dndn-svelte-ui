@@ -1,7 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { GroupButton } from '../../lib'
-  import type { Footer } from '../Modal/type'
+  import { GroupButton, type Footer } from '../../lib'
 
   export let isVerticalLayout = false
   export let footers: Partial<Footer>[] | undefined = undefined

@@ -1,8 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
   import { Button } from '..'
-  import { GroupButton, type Layout } from '../../lib'
-  import type { Footer } from './type'
+  import { GroupButton, type Footer, type Layout } from '../../lib'
 
   export let open = false
   export let width = '320px'

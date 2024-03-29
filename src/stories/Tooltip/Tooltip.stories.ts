@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/svelte'
 
+import { tooltipVariant } from '$lib'
 import Tooltip from './Tooltip.svelte'
-import { tooltipVariant } from './type'
 
 const meta = {
   title: 'Tooltip',

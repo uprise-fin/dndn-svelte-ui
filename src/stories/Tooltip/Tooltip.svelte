@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte'
   import { Icon } from '..'
-  import type { TooltipVariant } from './type'
+  import type { TooltipVariant } from '../../lib'
 
   export let variant: TooltipVariant = 'info'
   export let content = ''
