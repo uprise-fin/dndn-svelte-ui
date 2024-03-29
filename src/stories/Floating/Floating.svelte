@@ -36,6 +36,7 @@
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: 8;
       background: var(--main-surface);
       &:before {
         content: '';
