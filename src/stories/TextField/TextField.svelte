@@ -122,6 +122,7 @@
       width: 100%;
       height: 54px;
       padding-block: var(--padding);
+      padding-inline: 0;
       background: none;
       border: 0;
       outline: 0;
