@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
-  import { Button } from '..'
-  import { GroupButton, type Footer, type Layout } from '../../lib'
+  import { Button, type Footer, type Layout } from '..'
+  import { GroupButton } from '../../lib'
 
   export let open = false
   export let width = '320px'
@@ -13,7 +13,6 @@
   export let layout: Layout = 'padded'
   export let showCloseButton = true
   export let footers: Partial<Footer>[] | undefined = layout === 'fullscreen' ? [] : undefined
-
   const dispatch = createEventDispatcher<{ close: undefined }>()
 
   $: _showCloseButton = layout !== 'fullscreen' && showCloseButton
@@ -37,14 +36,14 @@
   class:dialog--toast={toast}
   style={`--width: ${width};`}
 >
-  <span class="dialog__backdrop" aria-hidden="true" on:click={handleClick} />
+  <span class="dialog__backdrop" aria-hidden="true" on:click={closeModal} />
 
   <article class="dialog__container">
     {#if title || availableCloseButton}
       <header class="dialog__header">
         <h1 class="dialog__title">{@html title}</h1>
         {#if availableCloseButton}
-          <button class="dialog__close" on:click={handleClick}>닫기</button>
+          <button class="dialog__close" on:click={closeModal}>닫기</button>
         {/if}
       </header>
     {/if}
