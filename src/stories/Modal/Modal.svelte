@@ -96,7 +96,7 @@
     }
 
     &__container {
-      overflow: auto;
+      overflow: hidden;
       box-sizing: border-box;
       position: relative;
       width: min(calc((100% - 6px) - 2em), var(--width));
@@ -104,6 +104,8 @@
       margin: auto;
       border-radius: 16px;
       background: #fff;
+      display: flex;
+      flex-direction: column;
 
       :not(.is-fullscreen) & {
         padding: var(--padding-block) 20px;
@@ -188,6 +190,8 @@
       font-size: 15px;
       line-height: 1.55;
       color: var(--on-neutral-tertiary);
+      overflow-y: auto;
+      flex-grow: 1;
     }
 
     :global(.group-button:not(:empty)) {
