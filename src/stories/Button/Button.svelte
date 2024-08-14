@@ -4,6 +4,7 @@
 
   export let variant: ButtonVariant = 'primary'
   export let label = ''
+  export let subLabel = ''
   export let disabled = false
   export let loading = false
   export let isFit = false
@@ -33,7 +34,12 @@
   on:click={handleClick}
   role="presentation"
 >
-  <slot>{label}</slot>
+  <slot>
+    {label}
+    {#if subLabel}
+      <span class="sub"> | {subLabel}</span>
+    {/if}
+  </slot>
 </svelte:element>
 
 <style lang="scss">
@@ -106,6 +112,14 @@
         background: transparent;
         color: var(--on-neutral-micro);
       }
+    }
+
+    .sub {
+      color: var(--main-88);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
     }
   }
 </style>
