@@ -36,7 +36,7 @@
   class:dialog--toast={toast}
   style={`--width: ${width};`}
 >
-  <span class="dialog__backdrop" aria-hidden="true" on:click={closeModal} />
+  <span class="dialog__backdrop" aria-hidden="true" />
 
   <article class="dialog__container">
     {#if title || availableCloseButton}
