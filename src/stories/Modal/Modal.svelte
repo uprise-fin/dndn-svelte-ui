@@ -66,7 +66,7 @@
 
 <style lang="scss">
   .dialog {
-    --padding-block: 28px;
+    --padding-block: 34px;
 
     display: flex;
     position: fixed;
@@ -189,7 +189,7 @@
       font-weight: 400;
       font-size: 15px;
       line-height: 1.55;
-      color: var(--on-neutral-tertiary);
+      color: var(--on-neutral-quaternary);
       overflow-y: auto;
       flex-grow: 1;
     }

@@ -55,7 +55,7 @@
     }
 
     :global(.group-button) {
-      padding: 0 var(--side-width) 30px;
+      padding: 0 var(--side-width) 34px;
     }
   }
 </style>
