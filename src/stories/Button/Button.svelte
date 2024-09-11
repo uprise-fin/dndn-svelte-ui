@@ -69,6 +69,10 @@
       background: var(--neutral-container--higher);
       color: var(--inverse-on-neutral);
       cursor: not-allowed;
+
+      .sub {
+        color: var(--inverse-on-neutral);
+      }
     }
 
     &:focus-visible {
