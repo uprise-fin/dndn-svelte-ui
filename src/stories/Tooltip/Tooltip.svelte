@@ -88,6 +88,7 @@
     margin: 10px 0 0;
     padding: 12px 16px;
     background: var(--inverse-neutral-container);
+    opacity: 0.9;
     max-width: 300px;
     width: max-content;
     border-radius: 6px;
