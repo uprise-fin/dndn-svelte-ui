@@ -37,7 +37,8 @@
   <slot>
     {label}
     {#if subLabel}
-      <span class="sub"> | {subLabel}</span>
+      <span class="sub line">|</span>
+      <span class="sub">{subLabel}</span>
     {/if}
   </slot>
 </svelte:element>
@@ -49,7 +50,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: 4px;
+    gap: 10px;
     white-space: nowrap;
     box-sizing: border-box;
     padding: 13px 16px;
@@ -60,6 +61,18 @@
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
     text-decoration: none;
+
+    .sub {
+      color: var(--main-88);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .line {
+      opacity: 0.3;
+    }
 
     &:not(:disabled) {
       cursor: pointer;
@@ -116,14 +129,6 @@
         background: transparent;
         color: var(--on-neutral-micro);
       }
-    }
-
-    .sub {
-      color: var(--main-88);
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 20px;
-      text-align: center;
     }
   }
 </style>
