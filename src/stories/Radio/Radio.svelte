@@ -5,7 +5,7 @@
   export let isVerticalLayout = false
   export let isBlock = false
   export let options: RadioOption[]
-  export let checked = options[0].value
+  export let checked: string | number | undefined = undefined
   export let size: 'medium' = 'medium'
 
   const dispatcher = createEventDispatcher<{ change: { event: Event; context: RadioOption } }>()
@@ -14,6 +14,7 @@
     const context = options.find((o) => o.value === value)
     if (!context) return
     dispatcher('change', { event, context })
+    checked = value
   }
 </script>
 
