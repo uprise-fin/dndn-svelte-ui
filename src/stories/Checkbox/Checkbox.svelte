@@ -3,13 +3,18 @@
 
   export let checked = false
   export let rounded = false
+  export let isTermsCheckbox = false
   export let size: 'medium' = 'medium'
 </script>
 
 <span class={`checkbox checkbox--${size}`} class:is-rounded={rounded}>
   <input class="checkbox__el" type="checkbox" {...$$restProps} bind:checked on:change />
   <i class="checkbox__img" style={`--color: var(--active--color)`}>
-    <Icon src="system/line/check" color="var(--active--color)" />
+    <!-- <Icon src="system/line/check" color="var(--active--color)" /> -->
+    <Icon
+      src={isTermsCheckbox ? 'system/line/bold-check' : 'system/line/check'}
+      color="var(--active--color)"
+    />
   </i>
 </span>
 

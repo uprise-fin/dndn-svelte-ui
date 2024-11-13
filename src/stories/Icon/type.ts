@@ -18,6 +18,7 @@ export type IconName =
   | 'system/fill/warning-circle'
   | 'system/line/add-circle'
   | 'system/line/arrow-forward'
+  | 'system/line/bold-check'
   | 'system/line/cancel-circle'
   | 'system/line/check'
   | 'system/line/chevron-down'

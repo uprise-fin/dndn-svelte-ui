@@ -27,11 +27,13 @@ export const Basic: Story = {
   args: {
     checked: false,
     rounded: false,
+    isTermsCheckbox: false,
   },
 }
 
 export const Rounded: Story = {
   args: {
     rounded: true,
+    isTermsCheckbox: false,
   },
 }
