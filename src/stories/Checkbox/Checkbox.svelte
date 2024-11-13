@@ -14,6 +14,7 @@
     <Icon
       src={isTermsCheckbox ? 'system/line/bold-check' : 'system/line/check'}
       color="var(--active--color)"
+      size={isTermsCheckbox ? 'large' : 'medium'}
     />
   </i>
 </span>
