@@ -27,5 +27,5 @@ import { Button } from '@uprise-fin/dndn-svelte-ui/src/stories'
 ```
 
 ```html
-<Button on:click={() => alert('Hello World!')}>Button</Button>
+<Button on:click={() => alert('Hello World!')}>Button.</Button>
 ```
