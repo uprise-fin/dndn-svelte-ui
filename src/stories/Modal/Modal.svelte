@@ -66,6 +66,7 @@
 
 <style lang="scss">
   .dialog {
+    --padding-top-block: 28px;
     --padding-block: 34px;
 
     display: flex;
@@ -108,7 +109,7 @@
       flex-direction: column;
 
       :not(.is-fullscreen) & {
-        padding: var(--padding-block) 20px;
+        padding: var(--padding-top-block) 20px var(--padding-block);
       }
 
       .is-centered & {
