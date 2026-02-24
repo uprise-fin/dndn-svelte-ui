@@ -28,4 +28,5 @@ export type IconName =
   | 'system/line/close'
   | 'system/line/help-circle'
   | 'system/line/refresh'
+  | 'system/line/reset'
   | 'system/line/warning-circle'
