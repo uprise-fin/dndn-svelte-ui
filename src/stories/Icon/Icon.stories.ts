@@ -94,6 +94,22 @@ export const line = {
   }),
 }
 
+export const bold = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('system/bold')) as IconName[],
+    },
+  }),
+}
+
 export const regular = {
   parameters: {
     docs: {
