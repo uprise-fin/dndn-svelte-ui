@@ -93,3 +93,99 @@ export const line = {
     },
   }),
 }
+
+export const icons_bold = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('icons/bold')) as IconName[],
+    },
+  }),
+}
+
+export const icons_duotone = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('icons/duotone')) as IconName[],
+    },
+  }),
+}
+
+export const icons_fill = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('icons/fill')) as IconName[],
+    },
+  }),
+}
+
+export const icons_light = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('icons/light')) as IconName[],
+    },
+  }),
+}
+
+export const icons_regular = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('icons/regular')) as IconName[],
+    },
+  }),
+}
+
+export const icons_thin = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('icons/thin')) as IconName[],
+    },
+  }),
+}
