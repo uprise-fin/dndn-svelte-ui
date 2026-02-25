@@ -110,6 +110,38 @@ export const bold = {
   }),
 }
 
+export const duotone = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('system/duotone')) as IconName[],
+    },
+  }),
+}
+
+export const fills = {
+  parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
+  },
+  render: () => ({
+    Component: Icons,
+    props: {
+      list: Object.keys(SVG).filter((src) => src.startsWith('system/fills')) as IconName[],
+    },
+  }),
+}
+
 export const regular = {
   parameters: {
     docs: {
